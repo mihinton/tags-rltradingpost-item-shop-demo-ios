@@ -1,0 +1,71 @@
+/* 
+  Localizable.strings
+  Item Shop Demo
+
+  Created by Michael Hinton on 10/28/21.
+  Copyright © 2021 HinTech, LLC. All rights reserved.
+*/
+
+"Antenna" = "Antenna";
+"Avatar Border" = "Bordo avatar";
+"Body" = "Carrozzeria";
+"Decal" = "Adesivi";
+"Engine Audio" = "Suono motore";
+"Goal Explosion" = "Esplosione gol";
+"Paint Finish" = "Vernice";
+"Player Anthem" = "Inno del giocatore";
+"Player Banner" = "Sfondo giocatore";
+"Rocket Boost" = "Propulsore";
+"Topper" = "Topper";
+"Trail" = "Scia";
+"Wheels" = "Ruote";
+
+"Black" = "Nero";
+"Burnt Sienna" = "Terra di siena bruciata";
+"Cobalt" = "Cobalto";
+"Crimson" = "Cremisi";
+"Forest Green" = "Verde foresta";
+"Grey" = "Grigio";
+"Lime" = "Lime";
+"Orange" = "Arancione";
+"Pink" = "Rosa";
+"Purple" = "Viola";
+"Saffron" = "Zafferano";
+"Sky Blue" = "Blu cielo";
+"Titanium White" = "Bianco di titanio";
+
+"Acrobat" = "Acrobata";
+"Aviator" = "Aviatore";
+"Goalkeeper" = "Portiere";
+"Guardian" = "Guardiano";
+"Juggler" = "Giocoliere";
+"Paragon" = "Esemplare";
+"Playmaker" = "Regista";
+"Scorer" = "Marcatore";
+"Show-off" = "Spaccone";
+"Sniper" = "Cecchino";
+"Striker" = "Attaccante";
+"Sweeper" = "Libero";
+"Tactician" = "Tattico";
+"Turtle" = "Tartaruga";
+"Victor" = "Vincitore";
+
+"Uncommon" = "Non Comune";
+"Rare" = "Raro";
+"Very Rare" = "Molto Raro";
+"Import" = "Importato";
+"Exotic" = "Esotico";
+"Black Market" = "Mercato Nero";
+"Limited" = "Limitato";
+
+"Today's Shop" = "Il Negozio di Oggi";
+"Support RL Trading Post 💜" = "Supporta RL Trading Post 💜";
+"Use Creator Code ✨RLTP✨ when crafting Blueprints or making Item Shop/Rocket Pass purchases #EpicPartner" = "Usate il Codice Creatore ✨RLTP✨ creando dei progetti o acquistando il Rocket Pass o degli oggetti nel negozio #EpicPartner";
+"Featured Items" = "Oggetti in Evidenza";
+"Daily Items" = "Oggetti Giornalieri";
+"Shop Exclusive" = "Esclusiva del Negozio";
+"Any item you purchase from the Item Shop cannot be traded.  Items above denoted as \"Shop Exclusive\" can only be purchased from the Item Shop and cannot be obtained by player-to-player trading.  If you have suggestions or feedback for the Item Shop, please email rltradingpostapp@gmail.com. :)  In connection with Epic Games' Support-A-Creator Program, RL Trading Post may receive a commission from in-game purchases when you use Creator Code \"RLTP\"." = "Ogni oggetto acquistato nel Negozio di Oggetti non può essere scambiato.\n\nGli oggetti sovrastanti contrassegnati con \"Esclusiva del Negozio\" sono esclusivi del Negozio di Oggetti e non possono essere ottenuti tramite scambi tra giocatori.\n\nQuesta funzione di Negozio di Oggetti è stata rilasciata come una \"beta\", questo significa che ci sono ancora alcune cose su cui stiamo lavorando e miglioramenti che saranno apportati. Se hai dei suggerimenti o del Feedback per questa funzione, scrivi a rltradingpostapp@gmail.com. :)\n\nDato il collegamento con il progetto Epic Games Supporta un Creatore, RL Trading Post potrebbe ricevere un compenso dagli aquisti in-game quando viene utilizzato il Codice Creatore \"RLTP\".";
+"Item Shop not yet loaded" = "Negozio di Oggetti non ancora caricato";
+"The current Item Shop is not yet available to view in RL Trading Post. Please note that the Item Shop feature is in beta and we're working to make adding the Item Shop a faster, automated process.  This page will refresh as soon as the new Item Shop items are available.  Thank you for your patience!" = "Il Negozio di Oggetti attuale non è ancora disponibile alla visualizzazione su RL Trading Post. Per favore notare che la funzione del Negozio di Oggetti è in beta e che stiamo lavorando per rendere il processo di aggiunta del negozio un processo più semplice e automatico.\n\nQuesta pagina si ricaricherà non appena i nuovi oggetti del Negozio di Oggetti saranno disponibili.\n\nGrazie per la vostra pazienza!";
+"rarity_category" = "%2$@ [%1$@]";
+"FREE" = "GRATIS";
