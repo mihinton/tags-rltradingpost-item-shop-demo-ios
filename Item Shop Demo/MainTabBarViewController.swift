@@ -15,7 +15,7 @@ class MainTabBarViewController: UITabBarController {
     private let swiftUiTabIndex = 0
 
     private var shopTableViewController: ShopTableViewController!
-    private var itemShopView: ItemShopView!
+    private var shopContentView: ShopContentView!
 
     private var currentIndex = 1
 
@@ -43,8 +43,8 @@ class MainTabBarViewController: UITabBarController {
         let uiKitShopNavigationController = UINavigationController(rootViewController: shopTableViewController)
         uiKitShopNavigationController.tabBarItem = UITabBarItem(title: "UIKit".localized, image: nil, tag: uiKitTabIndex)
         
-        itemShopView = ItemShopView()
-        let shopHostingController = UIHostingController(rootView: itemShopView)
+        shopContentView = ShopContentView()
+        let shopHostingController = UIHostingController(rootView: shopContentView)
         shopHostingController.tabBarItem = UITabBarItem(title: "SwiftUI".localized, image: nil, tag: swiftUiTabIndex)
         viewControllers = [shopHostingController, uiKitShopNavigationController]
     }

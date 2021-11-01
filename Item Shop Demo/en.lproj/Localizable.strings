@@ -28,13 +28,13 @@
 "Black Market" = "Black Market";
 "Limited" = "Limited";
 
-"Today's Shop" = "Today's Shop";
 "support_rl_trading_post_title" = "Support RL Trading Post 💜";
 "support_rl_trading_post_body" = "Use Creator Code ✨RLTP✨ when crafting Blueprints or making Item Shop/Rocket Pass purchases #EpicPartner";
+"todays_shop_title" = "Today's Shop";
 "Featured Items" = "Featured Items";
 "Daily Items" = "Daily Items";
 "Shop Exclusive" = "Shop Exclusive";
-"Any item you purchase from the Item Shop cannot be traded.  Items above denoted as \"Shop Exclusive\" can only be purchased from the Item Shop and cannot be obtained by player-to-player trading.  If you have suggestions or feedback for the Item Shop, please email rltradingpostapp@gmail.com. :)  In connection with Epic Games' Support-A-Creator Program, RL Trading Post may receive a commission from in-game purchases when you use Creator Code \"RLTP\"." = "Any item you purchase from the Item Shop cannot be traded.\n\nItems above denoted as \"Shop Exclusive\" can only be purchased from the Item Shop and cannot be obtained by player-to-player trading.\n\nIf you have suggestions or feedback for the Item Shop, please email rltradingpostapp@gmail.com. :)\n\nIn connection with Epic Games' Support-A-Creator Program, RL Trading Post may receive a commission from in-game purchases when you use Creator Code \"RLTP\".";
+"item_shop_footer" = "Any item you purchase from the Item Shop cannot be traded.\n\nItems above denoted as \"Shop Exclusive\" can only be purchased from the Item Shop and cannot be obtained by player-to-player trading.\n\nIf you have suggestions or feedback for the Item Shop, please email rltradingpostapp@gmail.com. :)\n\nIn connection with Epic Games' Support-A-Creator Program, RL Trading Post may receive a commission from in-game purchases when you use Creator Code \"RLTP\".";
 "Item Shop not yet loaded" = "Item Shop not yet loaded";
 "The current Item Shop is not yet available to view in RL Trading Post. Please note that the Item Shop feature is in beta and we're working to make adding the Item Shop a faster, automated process.  This page will refresh as soon as the new Item Shop items are available.  Thank you for your patience!" = "The current Item Shop is not yet available to view in RL Trading Post. Please note that the Item Shop feature is in beta and we're working to make adding the Item Shop a faster, automated process.\n\nThis page will refresh as soon as the new Item Shop items are available.\n\nThank you for your patience!";
 "rarity_category" = "%1$@ %2$@";

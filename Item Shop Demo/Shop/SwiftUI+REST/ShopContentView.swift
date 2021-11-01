@@ -1,5 +1,5 @@
 //
-//  ItemShopView.swift
+//  ShopContentView.swift
 //  Item Shop Demo
 //
 //  Created by Michael Hinton on 10/29/21.
@@ -8,11 +8,14 @@
 
 import SwiftUI
 
-struct ItemShopView: View {
+struct ShopContentView: View {
     var body: some View {
         NavigationView {
             List {
                 CreatorCodeView()
+                TimeframeTitleView()
+                ShopMessageView()
+                ShopFooterView()
             }
             .listStyle(.plain)
             .background(Color("PrimaryBackgroundColor"))
@@ -22,8 +25,8 @@ struct ItemShopView: View {
     }
 }
 
-struct ItemShopView_Previews: PreviewProvider {
+struct ShopContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemShopView()
+        ShopContentView()
     }
 }
