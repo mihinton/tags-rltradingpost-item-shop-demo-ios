@@ -21,8 +21,6 @@ class ShopTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "UIKit/Firebase".localized
-        navigationController?.tabBarItem = UITabBarItem(title: "UIKit".localized, image: nil, tag: 0)
         
         setupTableView()
         setupShopFirebaseListener()

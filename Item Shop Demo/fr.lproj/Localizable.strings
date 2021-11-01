@@ -59,8 +59,8 @@
 "Limited" = "Limité";
 
 "Today's Shop" = "Boutique du jour";
-"Support RL Trading Post 💜" = "Soutenir RL Trading Post 💜";
-"Use Creator Code ✨RLTP✨ when crafting Blueprints or making Item Shop/Rocket Pass purchases #EpicPartner" = "Utilisez le Code Créateur ✨RLTP✨ lors de la fabrication de Plans ou l'achat d'objets dans la Boutique d'Objet et/ou dans le Rocket Pass #EpicPartner";
+"support_rl_trading_post_title" = "Soutenir RL Trading Post 💜";
+"support_rl_trading_post_body" = "Utilisez le Code Créateur ✨RLTP✨ lors de la fabrication de Plans ou l'achat d'objets dans la Boutique d'Objet et/ou dans le Rocket Pass #EpicPartner";
 "Featured Items" = "Objets en vedette";
 "Daily Items" = "Objets quotidiens";
 "Shop Exclusive" = "Boutique exclusive";

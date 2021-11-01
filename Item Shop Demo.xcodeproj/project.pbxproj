@@ -11,6 +11,8 @@
 		24941DDE272AEC4D00F6ACD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24941DE0272AEC4D00F6ACD6 /* Localizable.strings */; };
 		24941DE6272AEF8C00F6ACD6 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 24941DE8272AEF8C00F6ACD6 /* Localizable.stringsdict */; };
 		24941DEE272C7BA200F6ACD6 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24941DED272C7BA200F6ACD6 /* ColorUtils.swift */; };
+		24941DF2272CB6C300F6ACD6 /* ItemShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24941DF1272CB6C300F6ACD6 /* ItemShopView.swift */; };
+		24941DF4272D8D1000F6ACD6 /* CreatorCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24941DF3272D8D0F00F6ACD6 /* CreatorCodeView.swift */; };
 		24E2EC6226FE156A0017838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2EC6126FE156A0017838A /* AppDelegate.swift */; };
 		24E2EC6926FE156A0017838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E2EC6726FE156A0017838A /* Main.storyboard */; };
 		24E2EC6B26FE156E0017838A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24E2EC6A26FE156E0017838A /* Assets.xcassets */; };
@@ -40,6 +42,7 @@
 		24E2ECB826FE51350017838A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2ECB726FE51350017838A /* MainTabBarViewController.swift */; };
 		24E2ECBB26FE578C0017838A /* TouchAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2ECBA26FE578C0017838A /* TouchAnimatedView.swift */; };
 		24E2ECBD26FE5AE50017838A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E2ECBC26FE5AE50017838A /* GoogleService-Info.plist */; };
+		24E3AE962730408E00D79F61 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3AE952730408E00D79F61 /* Color+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,8 @@
 		24941DEA272AEF8E00F6ACD6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = de; path = de.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		24941DEB272AEF8F00F6ACD6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = it; path = it.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		24941DED272C7BA200F6ACD6 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		24941DF1272CB6C300F6ACD6 /* ItemShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShopView.swift; sourceTree = "<group>"; };
+		24941DF3272D8D0F00F6ACD6 /* CreatorCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorCodeView.swift; sourceTree = "<group>"; };
 		24E2EC5E26FE156A0017838A /* Item Shop Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Item Shop Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E2EC6126FE156A0017838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24E2EC6826FE156A0017838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +86,7 @@
 		24E2ECB726FE51350017838A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		24E2ECBA26FE578C0017838A /* TouchAnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchAnimatedView.swift; sourceTree = "<group>"; };
 		24E2ECBC26FE5AE50017838A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24E3AE952730408E00D79F61 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,26 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		24941DEF272CB53D00F6ACD6 /* UIKit+Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				24E2EC9A26FE4FC50017838A /* Firebase */,
+				24E2EC9E26FE50050017838A /* TableViewCells */,
+				24E2EC7A26FE217E0017838A /* ShopTableViewController.swift */,
+				24E2EC7B26FE217E0017838A /* ShopTableViewController.xib */,
+			);
+			path = "UIKit+Firebase";
+			sourceTree = "<group>";
+		};
+		24941DF0272CB58400F6ACD6 /* SwiftUI+REST */ = {
+			isa = PBXGroup;
+			children = (
+				24941DF1272CB6C300F6ACD6 /* ItemShopView.swift */,
+				24941DF3272D8D0F00F6ACD6 /* CreatorCodeView.swift */,
+			);
+			path = "SwiftUI+REST";
+			sourceTree = "<group>";
+		};
 		24E2EC5526FE156A0017838A = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +158,9 @@
 		24E2EC6026FE156A0017838A /* Item Shop Demo */ = {
 			isa = PBXGroup;
 			children = (
-				24E2EC8426FE266E0017838A /* Extentions */,
+				24E2EC8426FE266E0017838A /* Extensions */,
 				24E2ECB926FE57590017838A /* Components */,
-				24E2EC7526FE1E680017838A /* Shop-UIKit */,
+				24E2EC7526FE1E680017838A /* Shop */,
 				24941DEC272C7B8400F6ACD6 /* Utils */,
 				24E2EC6126FE156A0017838A /* AppDelegate.swift */,
 				24E2ECB726FE51350017838A /* MainTabBarViewController.swift */,
@@ -149,28 +175,27 @@
 			path = "Item Shop Demo";
 			sourceTree = "<group>";
 		};
-		24E2EC7526FE1E680017838A /* Shop-UIKit */ = {
+		24E2EC7526FE1E680017838A /* Shop */ = {
 			isa = PBXGroup;
 			children = (
 				24E2EC9D26FE50020017838A /* Models */,
-				24E2EC9A26FE4FC50017838A /* Firebase */,
-				24E2EC9E26FE50050017838A /* TableViewCells */,
-				24E2EC7A26FE217E0017838A /* ShopTableViewController.swift */,
-				24E2EC7B26FE217E0017838A /* ShopTableViewController.xib */,
+				24941DEF272CB53D00F6ACD6 /* UIKit+Firebase */,
+				24941DF0272CB58400F6ACD6 /* SwiftUI+REST */,
 			);
-			path = "Shop-UIKit";
+			path = Shop;
 			sourceTree = "<group>";
 		};
-		24E2EC8426FE266E0017838A /* Extentions */ = {
+		24E2EC8426FE266E0017838A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				24E3AE952730408E00D79F61 /* Color+Hex.swift */,
 				24E2EC8926FE46A40017838A /* String+Localizable.swift */,
 				24E2EC8E26FE48570017838A /* UIColor+Theme.swift */,
 				24E2EC9026FE49890017838A /* UIImageView+FromUrl.swift */,
 				24E2EC8626FE27680017838A /* UITableView+HeaderFooterResizing.swift */,
 				24E2EC8526FE27680017838A /* UIViewController+SafariServices.swift */,
 			);
-			path = Extentions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		24E2EC9A26FE4FC50017838A /* Firebase */ = {
@@ -307,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24941DF2272CB6C300F6ACD6 /* ItemShopView.swift in Sources */,
 				24E2ECB226FE502B0017838A /* ItemShopTableViewCell.swift in Sources */,
 				24E2EC8826FE27680017838A /* UITableView+HeaderFooterResizing.swift in Sources */,
 				24E2EC8A26FE46A40017838A /* String+Localizable.swift in Sources */,
@@ -320,10 +346,12 @@
 				24E2ECB126FE502B0017838A /* ItemShopFooterView.swift in Sources */,
 				24E2ECB426FE502B0017838A /* ItemShopHeaderView.swift in Sources */,
 				24E2EC8726FE27680017838A /* UIViewController+SafariServices.swift in Sources */,
+				24E3AE962730408E00D79F61 /* Color+Hex.swift in Sources */,
 				24E2EC8F26FE48570017838A /* UIColor+Theme.swift in Sources */,
 				24E2ECAD26FE502B0017838A /* ItemShopTableViewHeaderFooterView.swift in Sources */,
 				24E2ECB526FE502B0017838A /* ItemShopUnavailableFooterView.swift in Sources */,
 				24E2EC7C26FE217E0017838A /* ShopTableViewController.swift in Sources */,
+				24941DF4272D8D1000F6ACD6 /* CreatorCodeView.swift in Sources */,
 				24E2EC9C26FE4FD10017838A /* ItemShopService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
