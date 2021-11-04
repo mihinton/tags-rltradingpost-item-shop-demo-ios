@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24855EFF27307DF7009E717B /* TimeframeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24855EFE27307DF7009E717B /* TimeframeTitleView.swift */; };
-		24855F0327307ED6009E717B /* ShopMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24855F0227307ED6009E717B /* ShopMessageView.swift */; };
 		24855F0527308284009E717B /* ShopFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24855F0427308284009E717B /* ShopFooterView.swift */; };
+		24855F072732DA86009E717B /* ShopSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24855F062732DA86009E717B /* ShopSectionHeaderView.swift */; };
 		24941DDA2729DDBD00F6ACD6 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 24941DD92729DDBD00F6ACD6 /* FirebaseFirestoreSwift-Beta */; };
 		24941DDE272AEC4D00F6ACD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24941DE0272AEC4D00F6ACD6 /* Localizable.strings */; };
 		24941DE6272AEF8C00F6ACD6 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 24941DE8272AEF8C00F6ACD6 /* Localizable.stringsdict */; };
@@ -49,9 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24855EFE27307DF7009E717B /* TimeframeTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeframeTitleView.swift; sourceTree = "<group>"; };
-		24855F0227307ED6009E717B /* ShopMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMessageView.swift; sourceTree = "<group>"; };
 		24855F0427308284009E717B /* ShopFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFooterView.swift; sourceTree = "<group>"; };
+		24855F062732DA86009E717B /* ShopSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSectionHeaderView.swift; sourceTree = "<group>"; };
 		24941DDF272AEC4D00F6ACD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		24941DE1272AEC5E00F6ACD6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		24941DE2272AEC6900F6ACD6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -140,8 +138,7 @@
 			children = (
 				24941DF1272CB6C300F6ACD6 /* ShopContentView.swift */,
 				24941DF3272D8D0F00F6ACD6 /* CreatorCodeView.swift */,
-				24855EFE27307DF7009E717B /* TimeframeTitleView.swift */,
-				24855F0227307ED6009E717B /* ShopMessageView.swift */,
+				24855F062732DA86009E717B /* ShopSectionHeaderView.swift */,
 				24855F0427308284009E717B /* ShopFooterView.swift */,
 			);
 			path = "SwiftUI+REST";
@@ -348,9 +345,9 @@
 				24E2EC8A26FE46A40017838A /* String+Localizable.swift in Sources */,
 				24E2ECBB26FE578C0017838A /* TouchAnimatedView.swift in Sources */,
 				24E2ECB826FE51350017838A /* MainTabBarViewController.swift in Sources */,
+				24855F072732DA86009E717B /* ShopSectionHeaderView.swift in Sources */,
 				24E2ECA226FE500C0017838A /* ShopRotation.swift in Sources */,
 				24E2ECA126FE500C0017838A /* ShopItem.swift in Sources */,
-				24855F0327307ED6009E717B /* ShopMessageView.swift in Sources */,
 				24E2EC9126FE49890017838A /* UIImageView+FromUrl.swift in Sources */,
 				24E2EC6226FE156A0017838A /* AppDelegate.swift in Sources */,
 				24941DEE272C7BA200F6ACD6 /* ColorUtils.swift in Sources */,
@@ -359,7 +356,6 @@
 				24E2EC8726FE27680017838A /* UIViewController+SafariServices.swift in Sources */,
 				24E3AE962730408E00D79F61 /* Color+Hex.swift in Sources */,
 				24E2EC8F26FE48570017838A /* UIColor+Theme.swift in Sources */,
-				24855EFF27307DF7009E717B /* TimeframeTitleView.swift in Sources */,
 				24E2ECAD26FE502B0017838A /* ItemShopTableViewHeaderFooterView.swift in Sources */,
 				24E2ECB526FE502B0017838A /* ItemShopUnavailableFooterView.swift in Sources */,
 				24E2EC7C26FE217E0017838A /* ShopTableViewController.swift in Sources */,

@@ -67,10 +67,10 @@ class ShopTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ItemShopTableViewHeaderFooterView") as! ItemShopTableViewHeaderFooterView
         if section == featuredItemsIndex {
-            cell.headerLabel.text = "Featured Items".localized
+            cell.headerLabel.text = "featured_items_section_header".localized
             cell.setExpiration(date: shopRotation.featuredEndDate)
         } else if section == dailyItemsIndex {
-            cell.headerLabel.text = "Daily Items".localized
+            cell.headerLabel.text = "daily_items_section_header".localized
             cell.setExpiration(date: shopRotation.dailyEndDate)
         } else {
             cell.headerLabel.text = ""

@@ -61,8 +61,8 @@
 "support_rl_trading_post_title" = "Unterstütze RL Trading Post 💜";
 "support_rl_trading_post_body" = "Benutze den Creator Code ✨RLTP✨ wenn du Entwürfe herstellst oder den Item-Shop/Rocket Pass nutzt #EpicPartner";
 "todays_shop_title" = "Der heutige Shop";
-"Featured Items" = "Empfohlene Items";
-"Daily Items" = "Tägliche Items";
+"featured_items_section_header" = "Empfohlene Items";
+"daily_items_section_header" = "Tägliche Items";
 "Shop Exclusive" = "Shop-Exklusiv";
 "item_shop_footer" = "Gekaufte Items können nicht mit anderen Spielern getauscht werden.\n\nItems die mit \"Shop-Exklusiv\" gekennzeichnet sind, sind exklusiv im Item-Shop erhältlich und können nicht über den Handel mit anderen Spielern erworben werden.\n\nDieses Item-Shop-Feature wurde als \"Beta\" veröffentlicht, was bedeutet dass wir noch an einigen Dingen arbeiten und Verbesserungen vornehmen werden. Wenn Du Vorschläge oder Feedback für den Item-Shop hast, bitte sende eine Email an rltradingpostapp@gmail.com :)\n\nIn Verbindung mit dem Support-A-Creator Programm von Epic Games, kann RL Trading Post eine Provision von In-Game-Käufen erhalten, wenn Du den Creator Code \"RLTP\" benutzt.";
 "Item Shop not yet loaded" = "Der Item Shop hat noch nicht geladen";

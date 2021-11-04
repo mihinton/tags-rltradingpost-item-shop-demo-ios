@@ -61,8 +61,8 @@
 "support_rl_trading_post_title" = "Soutenir RL Trading Post 💜";
 "support_rl_trading_post_body" = "Utilisez le Code Créateur ✨RLTP✨ lors de la fabrication de Plans ou l'achat d'objets dans la Boutique d'Objet et/ou dans le Rocket Pass #EpicPartner";
 "todays_shop_title" = "Boutique du jour";
-"Featured Items" = "Objets en vedette";
-"Daily Items" = "Objets quotidiens";
+"featured_items_section_header" = "Objets en vedette";
+"daily_items_section_header" = "Objets quotidiens";
 "Shop Exclusive" = "Boutique exclusive";
 "item_shop_footer" = "Aucun article que vous achetez dans la Boutique d'Objet ne peut être échangé.\n\nLes articles de la «Boutique exclusive» ne peuvent être achetés que dans la Boutique d'Objets et ne peuvent pas être obtenus par échange entre joueurs.\n\nCette fonctionnalité de la boutique d'objets a été publiée en \"version bêta\", ce qui signifie qu'il reste encore des choses sur lesquelles nous travaillons et des améliorations que nous apporterons. Si vous avez des suggestions ou des commentaires à propos de la Boutique d'Objets, veuillez envoyer un e-mail à rltradingpostapp@gmail.com. :)\n\nDans le cadre du programme Support-A-Creator d'Epic Games, RL Trading Post peut recevoir une commission sur les achats en jeu lorsque vous utilisez le code créateur \"RLTP\".";
 "Item Shop not yet loaded" = "Boutique d'objets pas encore chargée";

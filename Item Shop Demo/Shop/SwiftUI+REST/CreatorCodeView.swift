@@ -35,10 +35,7 @@ struct CreatorCodeView: View {
             .background(Color(hex: "#1DABEB"))
             .cornerRadius(10)
         }
-        .listRowInsets(EdgeInsets(top: 12, leading: 12, bottom: 0, trailing: 12))
-        .listRowBackground(Color.clear)
-        .listRowSeparator(.hidden)
-        .buttonStyle(.borderless)
+        .padding(EdgeInsets(top: 12, leading: 12, bottom: 0, trailing: 12))
     }
     
     private func openSupportAction() {

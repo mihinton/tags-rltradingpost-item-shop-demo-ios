@@ -15,10 +15,7 @@ struct ShopFooterView: View {
             .foregroundColor(.secondary)
             .multilineTextAlignment(.leading)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .listRowInsets(EdgeInsets(top: 6, leading: 12, bottom: 12, trailing: 12))
-            .listRowBackground(Color.clear)
-            .listRowSeparator(.hidden)
-            .buttonStyle(.borderless)
+            .padding(EdgeInsets(top: 6, leading: 12, bottom: 12, trailing: 12))
     }
 }
 

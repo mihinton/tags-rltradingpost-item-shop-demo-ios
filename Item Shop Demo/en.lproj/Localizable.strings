@@ -31,8 +31,8 @@
 "support_rl_trading_post_title" = "Support RL Trading Post 💜";
 "support_rl_trading_post_body" = "Use Creator Code ✨RLTP✨ when crafting Blueprints or making Item Shop/Rocket Pass purchases #EpicPartner";
 "todays_shop_title" = "Today's Shop";
-"Featured Items" = "Featured Items";
-"Daily Items" = "Daily Items";
+"featured_items_section_header" = "Featured Items";
+"daily_items_section_header" = "Daily Items";
 "Shop Exclusive" = "Shop Exclusive";
 "item_shop_footer" = "Any item you purchase from the Item Shop cannot be traded.\n\nItems above denoted as \"Shop Exclusive\" can only be purchased from the Item Shop and cannot be obtained by player-to-player trading.\n\nIf you have suggestions or feedback for the Item Shop, please email rltradingpostapp@gmail.com. :)\n\nIn connection with Epic Games' Support-A-Creator Program, RL Trading Post may receive a commission from in-game purchases when you use Creator Code \"RLTP\".";
 "Item Shop not yet loaded" = "Item Shop not yet loaded";

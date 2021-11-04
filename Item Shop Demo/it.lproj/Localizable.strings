@@ -61,8 +61,8 @@
 "support_rl_trading_post_title" = "Supporta RL Trading Post 💜";
 "support_rl_trading_post_body" = "Usate il Codice Creatore ✨RLTP✨ creando dei progetti o acquistando il Rocket Pass o degli oggetti nel negozio #EpicPartner";
 "todays_shop_title" = "Il Negozio di Oggi";
-"Featured Items" = "Oggetti in Evidenza";
-"Daily Items" = "Oggetti Giornalieri";
+"featured_items_section_header" = "Oggetti in Evidenza";
+"daily_items_section_header" = "Oggetti Giornalieri";
 "Shop Exclusive" = "Esclusiva del Negozio";
 "item_shop_footer" = "Ogni oggetto acquistato nel Negozio di Oggetti non può essere scambiato.\n\nGli oggetti sovrastanti contrassegnati con \"Esclusiva del Negozio\" sono esclusivi del Negozio di Oggetti e non possono essere ottenuti tramite scambi tra giocatori.\n\nQuesta funzione di Negozio di Oggetti è stata rilasciata come una \"beta\", questo significa che ci sono ancora alcune cose su cui stiamo lavorando e miglioramenti che saranno apportati. Se hai dei suggerimenti o del Feedback per questa funzione, scrivi a rltradingpostapp@gmail.com. :)\n\nDato il collegamento con il progetto Epic Games Supporta un Creatore, RL Trading Post potrebbe ricevere un compenso dagli aquisti in-game quando viene utilizzato il Codice Creatore \"RLTP\".";
 "Item Shop not yet loaded" = "Negozio di Oggetti non ancora caricato";
