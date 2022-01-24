@@ -32,28 +32,28 @@ struct ShopItemView: View {
                 HStack(spacing: 6.0) {
                     Spacer()
                     
-                    if item.certification != "None" {
+                    ZStack {
+                        Text(item.certification.localized)
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                            .padding([.vertical], 3.0)
+                            .padding([.horizontal], 6.0)
+                    }
+                    .background(Color.init(hex: "#80000000"))
+                    .cornerRadius(4)
+                    .opacity(item.color != "None" ? 1.0 : 0.0)
+                    
+                    if item.color != "None" {
                         ZStack {
-                            Text(item.certification.localized)
+                            Text(item.color.localized)
                                 .font(.footnote)
                                 .foregroundColor(.white)
                                 .padding([.vertical], 3.0)
                                 .padding([.horizontal], 6.0)
                         }
-                        .background(Color.init(hex: "#80000000"))
+                        .background(Color(ColorUtils.getPaintedColor(item.color)))
                         .cornerRadius(4)
                     }
-                    
-                    ZStack {
-                        Text(item.color.localized)
-                            .font(.footnote)
-                            .foregroundColor(.white)
-                            .padding([.vertical], 3.0)
-                            .padding([.horizontal], 6.0)
-                            .opacity(item.color != "None" ? 1.0 : 0.0)
-                    }
-                    .background(Color(ColorUtils.getPaintedColor(item.color)))
-                    .cornerRadius(4)
                 }
                 .padding([.top], 4.0)
                 
