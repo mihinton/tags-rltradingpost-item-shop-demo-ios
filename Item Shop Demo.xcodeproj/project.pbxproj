@@ -45,6 +45,7 @@
 		24E2ECBB26FE578C0017838A /* TouchAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2ECBA26FE578C0017838A /* TouchAnimatedView.swift */; };
 		24E2ECBD26FE5AE50017838A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24E2ECBC26FE5AE50017838A /* GoogleService-Info.plist */; };
 		24E3AE962730408E00D79F61 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3AE952730408E00D79F61 /* Color+Hex.swift */; };
+		24FD02A6279EDF34009F573F /* ShopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD02A5279EDF34009F573F /* ShopItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		24E2ECBA26FE578C0017838A /* TouchAnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchAnimatedView.swift; sourceTree = "<group>"; };
 		24E2ECBC26FE5AE50017838A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24E3AE952730408E00D79F61 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		24FD02A5279EDF34009F573F /* ShopItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				24941DF1272CB6C300F6ACD6 /* ShopContentView.swift */,
 				24941DF3272D8D0F00F6ACD6 /* CreatorCodeView.swift */,
 				24855F062732DA86009E717B /* ShopSectionHeaderView.swift */,
+				24FD02A5279EDF34009F573F /* ShopItemView.swift */,
 				24855F0427308284009E717B /* ShopFooterView.swift */,
 			);
 			path = "SwiftUI+REST";
@@ -347,6 +350,7 @@
 				24E2ECB826FE51350017838A /* MainTabBarViewController.swift in Sources */,
 				24855F072732DA86009E717B /* ShopSectionHeaderView.swift in Sources */,
 				24E2ECA226FE500C0017838A /* ShopRotation.swift in Sources */,
+				24FD02A6279EDF34009F573F /* ShopItemView.swift in Sources */,
 				24E2ECA126FE500C0017838A /* ShopItem.swift in Sources */,
 				24E2EC9126FE49890017838A /* UIImageView+FromUrl.swift in Sources */,
 				24E2EC6226FE156A0017838A /* AppDelegate.swift in Sources */,

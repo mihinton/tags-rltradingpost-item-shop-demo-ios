@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ShopContentView: View {
+    let shopItem = ShopItem(name: "Vampire Bat", category: "Goal Explosion", color: "Cobalt", certification: "None", rarity: "Import", price: 700, isTradable: true, imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/VampireBat.png")
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -21,7 +23,7 @@ struct ShopContentView: View {
                             .foregroundColor(.primary)
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                        Text("Hi! This is a test to see how links would work here, so let's see how it goes: https://rltradingpost.app")
+                        Text("Hello!")
                             .font(.callout)
                             .foregroundColor(.primary)
                             .multilineTextAlignment(.leading)
@@ -30,11 +32,17 @@ struct ShopContentView: View {
                     .padding(EdgeInsets(top: 18, leading: 12, bottom: 10, trailing: 12))
                     
                     Section(header: ShopSectionHeaderView(title: "featured_items_section_header".localized)) {
-                        
+                        ShopItemView(item: shopItem)
+                        ShopItemView(item: shopItem)
                     }
                     
                     Section(header: ShopSectionHeaderView(title: "daily_items_section_header".localized)) {
-                        
+                        ShopItemView(item: shopItem)
+                        ShopItemView(item: shopItem)
+                        ShopItemView(item: shopItem)
+                        ShopItemView(item: shopItem)
+                        ShopItemView(item: shopItem)
+                        ShopItemView(item: shopItem)
                     }
                     
                     ShopFooterView()

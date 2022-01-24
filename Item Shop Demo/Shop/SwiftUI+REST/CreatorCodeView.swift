@@ -13,12 +13,12 @@ struct CreatorCodeView: View {
     
     var body: some View {
         Button(action: openSupportAction) {
-            HStack(spacing: 10) {
+            HStack(spacing: 10.0) {
                 Image("rl-trading-post-logo")
                     .resizable()
                     .frame(width: 60, height: 60)
                     .padding([.leading], 10)
-                VStack(spacing: 3) {
+                VStack(spacing: 3.0) {
                     Text("support_rl_trading_post_title".localized)
                         .font(.headline)
                         .foregroundColor(.white)
