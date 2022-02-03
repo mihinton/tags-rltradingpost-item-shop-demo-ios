@@ -41,7 +41,7 @@ struct ShopItemView: View {
                     }
                     .background(Color.init(hex: "#80000000"))
                     .cornerRadius(4)
-                    .opacity(item.color != "None" ? 1.0 : 0.0)
+                    .opacity(item.certification != "None" ? 1.0 : 0.0)
                     
                     if item.color != "None" {
                         ZStack {

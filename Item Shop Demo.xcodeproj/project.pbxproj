@@ -15,6 +15,10 @@
 		24941DEE272C7BA200F6ACD6 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24941DED272C7BA200F6ACD6 /* ColorUtils.swift */; };
 		24941DF2272CB6C300F6ACD6 /* ShopContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24941DF1272CB6C300F6ACD6 /* ShopContentView.swift */; };
 		24941DF4272D8D1000F6ACD6 /* CreatorCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24941DF3272D8D0F00F6ACD6 /* CreatorCodeView.swift */; };
+		24B1C30527AC663800B6864F /* ItemShopFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C30427AC663700B6864F /* ItemShopFetcher.swift */; };
+		24B1C30727AC68FE00B6864F /* ResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C30627AC68FE00B6864F /* ResponseDecoder.swift */; };
+		24B1C30927AC697600B6864F /* FetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C30827AC697600B6864F /* FetchError.swift */; };
+		24B1C30B27AC6B3900B6864F /* ShopContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C30A27AC6B3800B6864F /* ShopContentViewModel.swift */; };
 		24E2EC6226FE156A0017838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2EC6126FE156A0017838A /* AppDelegate.swift */; };
 		24E2EC6926FE156A0017838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E2EC6726FE156A0017838A /* Main.storyboard */; };
 		24E2EC6B26FE156E0017838A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24E2EC6A26FE156E0017838A /* Assets.xcassets */; };
@@ -62,6 +66,10 @@
 		24941DED272C7BA200F6ACD6 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		24941DF1272CB6C300F6ACD6 /* ShopContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopContentView.swift; sourceTree = "<group>"; };
 		24941DF3272D8D0F00F6ACD6 /* CreatorCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorCodeView.swift; sourceTree = "<group>"; };
+		24B1C30427AC663700B6864F /* ItemShopFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShopFetcher.swift; sourceTree = "<group>"; };
+		24B1C30627AC68FE00B6864F /* ResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecoder.swift; sourceTree = "<group>"; };
+		24B1C30827AC697600B6864F /* FetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchError.swift; sourceTree = "<group>"; };
+		24B1C30A27AC6B3800B6864F /* ShopContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopContentViewModel.swift; sourceTree = "<group>"; };
 		24E2EC5E26FE156A0017838A /* Item Shop Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Item Shop Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E2EC6126FE156A0017838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24E2EC6826FE156A0017838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,13 +146,25 @@
 		24941DF0272CB58400F6ACD6 /* SwiftUI+REST */ = {
 			isa = PBXGroup;
 			children = (
+				24B1C30327AC65E400B6864F /* API */,
 				24941DF1272CB6C300F6ACD6 /* ShopContentView.swift */,
+				24B1C30A27AC6B3800B6864F /* ShopContentViewModel.swift */,
 				24941DF3272D8D0F00F6ACD6 /* CreatorCodeView.swift */,
 				24855F062732DA86009E717B /* ShopSectionHeaderView.swift */,
 				24FD02A5279EDF34009F573F /* ShopItemView.swift */,
 				24855F0427308284009E717B /* ShopFooterView.swift */,
 			);
 			path = "SwiftUI+REST";
+			sourceTree = "<group>";
+		};
+		24B1C30327AC65E400B6864F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				24B1C30427AC663700B6864F /* ItemShopFetcher.swift */,
+				24B1C30627AC68FE00B6864F /* ResponseDecoder.swift */,
+				24B1C30827AC697600B6864F /* FetchError.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		24E2EC5526FE156A0017838A = {
@@ -344,6 +364,7 @@
 				24941DF2272CB6C300F6ACD6 /* ShopContentView.swift in Sources */,
 				24E2ECB226FE502B0017838A /* ItemShopTableViewCell.swift in Sources */,
 				24E2EC8826FE27680017838A /* UITableView+HeaderFooterResizing.swift in Sources */,
+				24B1C30527AC663800B6864F /* ItemShopFetcher.swift in Sources */,
 				24855F0527308284009E717B /* ShopFooterView.swift in Sources */,
 				24E2EC8A26FE46A40017838A /* String+Localizable.swift in Sources */,
 				24E2ECBB26FE578C0017838A /* TouchAnimatedView.swift in Sources */,
@@ -358,11 +379,14 @@
 				24E2ECB126FE502B0017838A /* ItemShopFooterView.swift in Sources */,
 				24E2ECB426FE502B0017838A /* ItemShopHeaderView.swift in Sources */,
 				24E2EC8726FE27680017838A /* UIViewController+SafariServices.swift in Sources */,
+				24B1C30B27AC6B3900B6864F /* ShopContentViewModel.swift in Sources */,
 				24E3AE962730408E00D79F61 /* Color+Hex.swift in Sources */,
 				24E2EC8F26FE48570017838A /* UIColor+Theme.swift in Sources */,
 				24E2ECAD26FE502B0017838A /* ItemShopTableViewHeaderFooterView.swift in Sources */,
 				24E2ECB526FE502B0017838A /* ItemShopUnavailableFooterView.swift in Sources */,
 				24E2EC7C26FE217E0017838A /* ShopTableViewController.swift in Sources */,
+				24B1C30727AC68FE00B6864F /* ResponseDecoder.swift in Sources */,
+				24B1C30927AC697600B6864F /* FetchError.swift in Sources */,
 				24941DF4272D8D1000F6ACD6 /* CreatorCodeView.swift in Sources */,
 				24E2EC9C26FE4FD10017838A /* ItemShopService.swift in Sources */,
 			);
@@ -550,6 +574,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "app.rltradingpost.Item-Shop-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -578,6 +603,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "app.rltradingpost.Item-Shop-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct ShopItem: Codable {
+struct ShopItem: Codable, Identifiable {
 
+    var id = UUID()
     var name: String
     var category: String
     var color: String
