@@ -67,7 +67,9 @@ private extension ShopView {
         }
         
         private func openSupportAction() {
-            openUrl(URL(string: "https://rltradingpost.app/support_a_creator")!)
+            if let url = URL(string: "https://rltradingpost.app/support_a_creator") {
+                openUrl(url)
+            }
         }
     }
     
