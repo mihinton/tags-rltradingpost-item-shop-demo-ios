@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct ShopItemView: View {
-    var item: ShopItem!
+
+    let item: ShopItem
 
     var body: some View {
         let gradient = Gradient(stops: [
@@ -107,16 +108,6 @@ struct ShopItemView: View {
 
 struct ShopItemView_Previews: PreviewProvider {
     static var previews: some View {
-        let shopItem = ShopItem(
-            name: "Vampire Bat",
-            category: "Goal Explosion",
-            color: "Cobalt",
-            certification: "None",
-            rarity: "Import",
-            price: 700,
-            isTradable: true,
-            imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/VampireBat.png"
-        )
-        ShopItemView(item: shopItem)
+        ShopItemView(item: ShopItem.fake())
     }
 }

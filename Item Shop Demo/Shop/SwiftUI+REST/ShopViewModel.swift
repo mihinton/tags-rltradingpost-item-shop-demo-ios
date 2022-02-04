@@ -1,5 +1,5 @@
 //
-//  ShopContentViewModel.swift
+//  ShopViewModel.swift
 //  Item Shop Demo
 //
 //  Created by Michael Hinton on 2/3/22.
@@ -9,7 +9,7 @@
 import Combine
 import SwiftUI
 
-class ShopContentViewModel: ObservableObject {
+class ShopViewModel: ObservableObject {
     @Published var shopRotation: ShopRotation? = nil
 
     private let itemShopFetcher = ItemShopFetcher()
