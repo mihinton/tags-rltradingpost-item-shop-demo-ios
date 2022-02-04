@@ -52,7 +52,7 @@ struct ShopSectionHeaderView_Previews: PreviewProvider {
             title: "Featured Items",
             endDate: .nextShopRefresh
         )
-        viewModel.timeRemaining = "5 minutes 12 seconds"
+        viewModel.timeRemainingCountdownText = "5 minutes 12 seconds"
         return viewModel
     }
 }
