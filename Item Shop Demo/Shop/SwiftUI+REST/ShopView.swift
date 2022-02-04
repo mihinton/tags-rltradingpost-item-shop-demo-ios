@@ -102,7 +102,7 @@ private extension ShopView {
                 )
             ) {
                 ForEach(shopRotation.featuredItems) { item in
-                    ShopItemView(item: item)
+                    ShopItemView(viewModel: ShopItemViewModel(item: item))
                 }
             }
             
@@ -115,7 +115,7 @@ private extension ShopView {
                 )
             ) {
                 ForEach(shopRotation.dailyItems) { item in
-                    ShopItemView(item: item)
+                    ShopItemView(viewModel: ShopItemViewModel(item: item))
                 }
             }
         }

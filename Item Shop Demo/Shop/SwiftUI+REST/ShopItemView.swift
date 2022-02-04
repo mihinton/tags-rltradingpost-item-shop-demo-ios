@@ -10,14 +10,10 @@ import SwiftUI
 
 struct ShopItemView: View {
 
-    let item: ShopItem
+    let viewModel: ShopItemViewModel
 
     var body: some View {
-        let gradient = Gradient(stops: [
-            .init(color: .black, location: 0.0),
-            .init(color: .black, location: 0.35),
-            .init(color: Color(ColorUtils.getRarityColor(item.rarity)), location: 1.0)
-        ])
+        let item = viewModel.item
 
         ZStack {
             VStack(spacing: 0.0) {
@@ -99,7 +95,17 @@ struct ShopItemView: View {
             }
             .padding([.all], 10.0)
         }
-        .background(LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing))
+        .background(
+            LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .black, location: 0.0),
+                    .init(color: .black, location: 0.35),
+                    .init(color: Color(ColorUtils.getRarityColor(item.rarity)), location: 1.0)
+                ]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
         .cornerRadius(10)
         .padding([.vertical], 6.0)
         .padding([.horizontal], 12.0)
@@ -108,6 +114,6 @@ struct ShopItemView: View {
 
 struct ShopItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopItemView(item: ShopItem.fake())
+        ShopItemView(viewModel: ShopItemViewModel(item: ShopItem.fake()))
     }
 }
