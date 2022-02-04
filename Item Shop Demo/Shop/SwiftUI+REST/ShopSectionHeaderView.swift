@@ -9,28 +9,32 @@
 import SwiftUI
 
 struct ShopSectionHeaderView: View {
-    var title: String = ""
+
+    @ObservedObject var viewModel: ShopSectionHeaderViewModel
 
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 2.0) {
-                Text(title)
+                Text(viewModel.title)
                     .font(.title2)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                HStack(spacing: 3.0) {
-                    Image("countdown")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(Color("TimeRemainingColor"))
-                    Text("TIME REMAINING!")
-                        .font(.subheadline)
-                        .foregroundColor(Color("TimeRemainingColor"))
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                
+                if let timeRemaining = viewModel.timeRemainingCountdownText {
+                    HStack(spacing: 3.0) {
+                        Image("countdown")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color("TimeRemainingColor"))
+                        Text(timeRemaining)
+                            .font(.subheadline)
+                            .foregroundColor(Color("TimeRemainingColor"))
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .frame(height: UIFont.preferredFont(forTextStyle: .subheadline).pointSize)
                 }
-                .frame(height: UIFont.preferredFont(forTextStyle: .subheadline).pointSize)
             }
             .padding(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
         }
@@ -40,6 +44,15 @@ struct ShopSectionHeaderView: View {
 
 struct ShopSectionHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopSectionHeaderView()
+        ShopSectionHeaderView(viewModel: createPopulatedSectionHeaderViewModel())
+    }
+    
+    static func createPopulatedSectionHeaderViewModel() -> ShopSectionHeaderViewModel {
+        let viewModel = ShopSectionHeaderViewModel(
+            title: "Featured Items",
+            endDate: .nextShopRefresh
+        )
+        viewModel.timeRemaining = "5 minutes 12 seconds"
+        return viewModel
     }
 }

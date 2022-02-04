@@ -19,6 +19,8 @@
 		24B1C30B27AC6B3900B6864F /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C30A27AC6B3800B6864F /* ShopViewModel.swift */; };
 		24B1C30D27AD753200B6864F /* ShopItem+MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C30C27AD753200B6864F /* ShopItem+MockData.swift */; };
 		24B1C30F27AD755500B6864F /* ShopRotation+MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C30E27AD755500B6864F /* ShopRotation+MockData.swift */; };
+		24B1C31127ADAE4E00B6864F /* ShopSectionHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C31027ADAE4E00B6864F /* ShopSectionHeaderViewModel.swift */; };
+		24B1C31327ADB5C900B6864F /* Date+ShopRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1C31227ADB5C900B6864F /* Date+ShopRefresh.swift */; };
 		24E2EC6226FE156A0017838A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2EC6126FE156A0017838A /* AppDelegate.swift */; };
 		24E2EC6926FE156A0017838A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E2EC6726FE156A0017838A /* Main.storyboard */; };
 		24E2EC6B26FE156E0017838A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24E2EC6A26FE156E0017838A /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		24B1C30A27AC6B3800B6864F /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
 		24B1C30C27AD753200B6864F /* ShopItem+MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopItem+MockData.swift"; sourceTree = "<group>"; };
 		24B1C30E27AD755500B6864F /* ShopRotation+MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopRotation+MockData.swift"; sourceTree = "<group>"; };
+		24B1C31027ADAE4E00B6864F /* ShopSectionHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSectionHeaderViewModel.swift; sourceTree = "<group>"; };
+		24B1C31227ADB5C900B6864F /* Date+ShopRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ShopRefresh.swift"; sourceTree = "<group>"; };
 		24E2EC5E26FE156A0017838A /* Item Shop Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Item Shop Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E2EC6126FE156A0017838A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24E2EC6826FE156A0017838A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 				24941DF1272CB6C300F6ACD6 /* ShopView.swift */,
 				24B1C30A27AC6B3800B6864F /* ShopViewModel.swift */,
 				24855F062732DA86009E717B /* ShopSectionHeaderView.swift */,
+				24B1C31027ADAE4E00B6864F /* ShopSectionHeaderViewModel.swift */,
 				24FD02A5279EDF34009F573F /* ShopItemView.swift */,
 			);
 			path = "SwiftUI+REST";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				24E3AE952730408E00D79F61 /* Color+Hex.swift */,
+				24B1C31227ADB5C900B6864F /* Date+ShopRefresh.swift */,
 				24E2EC8926FE46A40017838A /* String+Localizable.swift */,
 				24E2EC8E26FE48570017838A /* UIColor+Theme.swift */,
 				24E2EC9026FE49890017838A /* UIImageView+FromUrl.swift */,
@@ -364,6 +370,7 @@
 				24941DF2272CB6C300F6ACD6 /* ShopView.swift in Sources */,
 				24E2ECB226FE502B0017838A /* ItemShopTableViewCell.swift in Sources */,
 				24E2EC8826FE27680017838A /* UITableView+HeaderFooterResizing.swift in Sources */,
+				24B1C31327ADB5C900B6864F /* Date+ShopRefresh.swift in Sources */,
 				24B1C30527AC663800B6864F /* ItemShopFetcher.swift in Sources */,
 				24E2EC8A26FE46A40017838A /* String+Localizable.swift in Sources */,
 				24E2ECBB26FE578C0017838A /* TouchAnimatedView.swift in Sources */,
@@ -372,6 +379,7 @@
 				24E2ECA226FE500C0017838A /* ShopRotation.swift in Sources */,
 				24FD02A6279EDF34009F573F /* ShopItemView.swift in Sources */,
 				24E2ECA126FE500C0017838A /* ShopItem.swift in Sources */,
+				24B1C31127ADAE4E00B6864F /* ShopSectionHeaderViewModel.swift in Sources */,
 				24E2EC9126FE49890017838A /* UIImageView+FromUrl.swift in Sources */,
 				24E2EC6226FE156A0017838A /* AppDelegate.swift in Sources */,
 				24941DEE272C7BA200F6ACD6 /* ColorUtils.swift in Sources */,

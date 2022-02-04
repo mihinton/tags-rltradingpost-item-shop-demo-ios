@@ -91,15 +91,29 @@ private extension ShopView {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
-            .padding(EdgeInsets(top: 18, leading: 12, bottom: 10, trailing: 12))
+            .padding(EdgeInsets(top: 18, leading: 12, bottom: 12, trailing: 12))
             
-            Section(header: ShopSectionHeaderView(title: "featured_items_section_header".localized)) {
+            Section(
+                header: ShopSectionHeaderView(
+                    viewModel: ShopSectionHeaderViewModel(
+                        title: "featured_items_section_header".localized,
+                        endDate: shopRotation.featuredEndDate
+                    )
+                )
+            ) {
                 ForEach(shopRotation.featuredItems) { item in
                     ShopItemView(item: item)
                 }
             }
             
-            Section(header: ShopSectionHeaderView(title: "daily_items_section_header".localized)) {
+            Section(
+                header: ShopSectionHeaderView(
+                    viewModel: ShopSectionHeaderViewModel(
+                        title: "daily_items_section_header".localized,
+                        endDate: shopRotation.dailyEndDate
+                    )
+                )
+            ) {
                 ForEach(shopRotation.dailyItems) { item in
                     ShopItemView(item: item)
                 }
@@ -128,8 +142,8 @@ struct ShopView_Previews: PreviewProvider {
     }
     
     static func createPopulatedShopViewModel() -> ShopViewModel {
-        let populatedShopViewModel = ShopViewModel()
-        populatedShopViewModel.shopRotation = ShopRotation.fake()
-        return populatedShopViewModel
+        let viewModel = ShopViewModel()
+        viewModel.shopRotation = ShopRotation.fake()
+        return viewModel
     }
 }

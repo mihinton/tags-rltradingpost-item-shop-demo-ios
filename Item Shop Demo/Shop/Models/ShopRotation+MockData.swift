@@ -35,7 +35,7 @@ extension ShopRotation {
                 )
             ],
             featuredStartDate: Date(),
-            featuredEndDate: Date(),
+            featuredEndDate: .nextShopRefresh,
             dailyItems: [
                 ShopItem(
                     name: "Breakout: Heiwa",
@@ -99,7 +99,7 @@ extension ShopRotation {
                 )
             ],
             dailyStartDate: Date(),
-            dailyEndDate: Date(),
+            dailyEndDate: .nextShopRefresh,
             message: "This is a test message. Thanks for looking at my app! :)"
         )
     }
