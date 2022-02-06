@@ -102,7 +102,9 @@ private extension ShopView {
                 )
             ) {
                 ForEach(shopRotation.featuredItems) { item in
-                    ShopItemView(viewModel: ShopItemViewModel(item: item))
+                    ShopItemView(
+                        viewModel: ShopItemViewModel(item: item, isFeatured: true)
+                    )
                 }
             }
             

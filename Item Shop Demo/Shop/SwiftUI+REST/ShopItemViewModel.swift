@@ -12,8 +12,14 @@ import UIKit
 final class ShopItemViewModel {
 
     let item: ShopItem
+    let isFeatured: Bool
 
-    init(item: ShopItem) {
+    var categoryImageFileName: String {
+        return item.category.lowercased().replacingOccurrences(of: " ", with: "-")
+    }
+
+    init(item: ShopItem, isFeatured: Bool = false) {
         self.item = item
+        self.isFeatured = isFeatured
     }
 }

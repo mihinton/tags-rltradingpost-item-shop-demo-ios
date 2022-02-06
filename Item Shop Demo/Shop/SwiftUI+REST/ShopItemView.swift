@@ -12,6 +12,8 @@ struct ShopItemView: View {
 
     let viewModel: ShopItemViewModel
 
+    @State private var contentHeight: CGFloat = .zero
+
     var body: some View {
         let item = viewModel.item
 
@@ -94,13 +96,39 @@ struct ShopItemView: View {
                 .padding([.top], 24.0)
             }
             .padding([.all], 10.0)
+            .background(GeometryReader { geometry in
+                // I know this isn't great,
+                // but I couldn't get PreferenceKey to work here
+                setupContentHeight(geometry: geometry)
+            })
+            
+            let iconPadding: CGFloat = 10.0
+            HStack(spacing: 0.0) {
+                let iconSize = max(contentHeight - iconPadding * 2, .zero)
+                Image("rl-trading-post-logo")
+                    .resizable()
+                    .frame(width: iconSize, height: iconSize)
+                    .padding([.all], iconPadding)
+                
+                if viewModel.isFeatured {
+                    Image(viewModel.categoryImageFileName)
+                        .resizable()
+                        .frame(maxWidth: .infinity)
+                        .padding([.trailing], 10.0)
+                        .aspectRatio(contentMode: .fill)
+                        .opacity(0.05)
+                } else {
+                    Spacer()
+                }
+            }
+            .frame(height: contentHeight)
         }
         .background(
             LinearGradient(
                 gradient: Gradient(stops: [
                     .init(color: .black, location: 0.0),
                     .init(color: .black, location: 0.35),
-                    .init(color: Color(ColorUtils.getRarityColor(item.rarity)), location: 1.0)
+                    .init(color: Color(ColorUtils.getRarityColor(viewModel.item.rarity)), location: 1.0)
                 ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -110,10 +138,20 @@ struct ShopItemView: View {
         .padding([.vertical], 6.0)
         .padding([.horizontal], 12.0)
     }
+    
+    private func setupContentHeight(geometry: GeometryProxy) -> some View {
+        DispatchQueue.main.async { self.contentHeight = geometry.size.height }
+        return Color.clear
+    }
 }
 
 struct ShopItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopItemView(viewModel: ShopItemViewModel(item: ShopItem.fake()))
+        ShopItemView(
+            viewModel: ShopItemViewModel(
+                item: ShopItem.fake(),
+                isFeatured: true
+            )
+        )
     }
 }
