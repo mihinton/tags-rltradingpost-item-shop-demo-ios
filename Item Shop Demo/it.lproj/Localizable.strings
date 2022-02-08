@@ -63,9 +63,9 @@
 "todays_shop_title" = "Il Negozio di Oggi";
 "featured_items_section_header" = "Oggetti in Evidenza";
 "daily_items_section_header" = "Oggetti Giornalieri";
-"Shop Exclusive" = "Esclusiva del Negozio";
+"shop_exclusive" = "Esclusiva del Negozio";
 "item_shop_footer" = "Ogni oggetto acquistato nel Negozio di Oggetti non può essere scambiato.\n\nGli oggetti sovrastanti contrassegnati con \"Esclusiva del Negozio\" sono esclusivi del Negozio di Oggetti e non possono essere ottenuti tramite scambi tra giocatori.\n\nQuesta funzione di Negozio di Oggetti è stata rilasciata come una \"beta\", questo significa che ci sono ancora alcune cose su cui stiamo lavorando e miglioramenti che saranno apportati. Se hai dei suggerimenti o del Feedback per questa funzione, scrivi a rltradingpostapp@gmail.com. :)\n\nDato il collegamento con il progetto Epic Games Supporta un Creatore, RL Trading Post potrebbe ricevere un compenso dagli aquisti in-game quando viene utilizzato il Codice Creatore \"RLTP\".";
 "Item Shop not yet loaded" = "Negozio di Oggetti non ancora caricato";
 "The current Item Shop is not yet available to view in RL Trading Post. Please note that the Item Shop feature is in beta and we're working to make adding the Item Shop a faster, automated process.  This page will refresh as soon as the new Item Shop items are available.  Thank you for your patience!" = "Il Negozio di Oggetti attuale non è ancora disponibile alla visualizzazione su RL Trading Post. Per favore notare che la funzione del Negozio di Oggetti è in beta e che stiamo lavorando per rendere il processo di aggiunta del negozio un processo più semplice e automatico.\n\nQuesta pagina si ricaricherà non appena i nuovi oggetti del Negozio di Oggetti saranno disponibili.\n\nGrazie per la vostra pazienza!";
 "rarity_category" = "%2$@ [%1$@]";
-"FREE" = "GRATIS";
+"price_free" = "GRATIS";

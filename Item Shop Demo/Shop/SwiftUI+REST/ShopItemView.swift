@@ -15,9 +15,36 @@ struct ShopItemView: View {
     @State private var contentHeight: CGFloat = .zero
 
     var body: some View {
-        let item = viewModel.item
-
         ZStack {
+            ItemInformationView(item: viewModel.item)
+                .background(GeometryReader { geometry in
+                    // I know this isn't great,
+                    // but I couldn't get PreferenceKey to work here
+                    setupContentHeight(geometry: geometry)
+                })
+            
+            if contentHeight > 0 {
+                ItemIconsView(viewModel: viewModel, contentHeight: contentHeight)
+            }
+        }
+        .background(ItemCardBackgroundView(item: viewModel.item))
+        .cornerRadius(10)
+        .padding([.vertical], 6.0)
+        .padding([.horizontal], 12.0)
+    }
+    
+    private func setupContentHeight(geometry: GeometryProxy) -> some View {
+        DispatchQueue.main.async { self.contentHeight = geometry.size.height }
+        return Color.clear
+    }
+}
+
+extension ShopItemView {
+
+    struct ItemInformationView: View {
+        let item: ShopItem
+        
+        var body: some View {
             VStack(spacing: 0.0) {
                 Text(item.name)
                     .font(.title)
@@ -65,7 +92,7 @@ struct ShopItemView: View {
                                 Image("untradable")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                Text("Shop Exclusive")
+                                Text("shop_exclusive".localized)
                                     .font(.footnote)
                                     .foregroundColor(.white)
                             }
@@ -82,7 +109,7 @@ struct ShopItemView: View {
                             Image("credits")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                            Text(item.price > 0 ? "\(item.price)" : "FREE".localized)
+                            Text(item.price > 0 ? "\(item.price)" : "price_free".localized)
                                 .font(.footnote)
                                 .foregroundColor(.white)
                         }
@@ -96,58 +123,56 @@ struct ShopItemView: View {
                 .padding([.top], 24.0)
             }
             .padding([.all], 10.0)
-            .background(GeometryReader { geometry in
-                // I know this isn't great,
-                // but I couldn't get PreferenceKey to work here
-                setupContentHeight(geometry: geometry)
-            })
-            
-            if contentHeight > 0 {
-                let iconPadding: CGFloat = 10.0
-                HStack(spacing: 0.0) {
-                    let iconSize = max(contentHeight - iconPadding * 2, .zero)
-                    if let imageData = viewModel.imageData {
-                        Image(uiImage: UIImage(data: imageData) ?? UIImage())
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: iconSize, height: iconSize)
-                            .padding([.all], iconPadding)
-                    }
-                    
-                    if viewModel.isFeatured {
-                        Image(viewModel.categoryImageFileName)
-                            .resizable()
-                            .frame(maxWidth: .infinity)
-                            .padding([.trailing], 10.0)
-                            .aspectRatio(contentMode: .fill)
-                            .opacity(0.05)
-                    } else {
-                        Spacer()
-                    }
-                }
-                .frame(height: contentHeight)
-            }
         }
-        .background(
+    }
+    
+    struct ItemIconsView: View {
+        let viewModel: ShopItemViewModel
+        let contentHeight: CGFloat
+        
+        var body: some View {
+            let iconPadding: CGFloat = 10.0
+            HStack(spacing: 0.0) {
+                let iconSize = max(contentHeight - iconPadding * 2, .zero)
+                if let imageData = viewModel.imageData {
+                    Image(uiImage: UIImage(data: imageData) ?? UIImage())
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: iconSize, height: iconSize)
+                        .padding([.all], iconPadding)
+                }
+                
+                if viewModel.isFeatured {
+                    Image(viewModel.categoryImageFileName)
+                        .resizable()
+                        .frame(maxWidth: .infinity)
+                        .padding([.trailing], 10.0)
+                        .aspectRatio(contentMode: .fill)
+                        .opacity(0.05)
+                } else {
+                    Spacer()
+                }
+            }
+            .frame(height: contentHeight)
+        }
+    }
+    
+    struct ItemCardBackgroundView: View {
+        let item: ShopItem
+        
+        var body: some View {
             LinearGradient(
                 gradient: Gradient(stops: [
                     .init(color: .black, location: 0.0),
                     .init(color: .black, location: 0.35),
-                    .init(color: Color(ColorUtils.getRarityColor(viewModel.item.rarity)), location: 1.0)
+                    .init(color: Color(ColorUtils.getRarityColor(item.rarity)), location: 1.0)
                 ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
-        )
-        .cornerRadius(10)
-        .padding([.vertical], 6.0)
-        .padding([.horizontal], 12.0)
+        }
     }
-    
-    private func setupContentHeight(geometry: GeometryProxy) -> some View {
-        DispatchQueue.main.async { self.contentHeight = geometry.size.height }
-        return Color.clear
-    }
+
 }
 
 struct ShopItemView_Previews: PreviewProvider {
