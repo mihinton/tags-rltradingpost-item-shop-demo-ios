@@ -15,7 +15,7 @@ class ShopItemViewModel: ObservableObject {
     let item: ShopItem
     let isFeatured: Bool
 
-    @Published var imageData: Data? = nil
+    @Published var imageData: Data? = UIImage(named: "rl-trading-post-logo")?.pngData()
 
     private let itemShopFetcher = ItemShopFetcher()
     private var disposables = Set<AnyCancellable>()

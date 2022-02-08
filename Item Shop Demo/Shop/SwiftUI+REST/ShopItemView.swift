@@ -112,12 +112,6 @@ struct ShopItemView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: iconSize, height: iconSize)
                             .padding([.all], iconPadding)
-                    } else {
-                        Image("rl-trading-post-logo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: iconSize, height: iconSize)
-                            .padding([.all], iconPadding)
                     }
                     
                     if viewModel.isFeatured {

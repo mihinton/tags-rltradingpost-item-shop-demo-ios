@@ -18,13 +18,14 @@ class ShopSectionHeaderViewModel: ObservableObject {
     let title: String
     let endDate: Date
 
-    private var timerCancellable: AnyCancellable? = nil
     @Published var timeRemainingCountdownText: String? = ""
+    private var timerCancellable: AnyCancellable? = nil
 
     init(title: String, endDate: Date) {
         self.title = title
         self.endDate = endDate
-
+        
+        timeRemainingCountdownText = getTimeRemaining()
         timerCancellable = Timer.publish(every: 1.0, on: .main, in: .default)
             .autoconnect()
             .map { [weak self] _ in
