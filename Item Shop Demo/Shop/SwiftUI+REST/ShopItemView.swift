@@ -87,38 +87,10 @@ extension ShopItemView {
                     Spacer()
                     
                     if !item.isTradable {
-                        ZStack {
-                            HStack(spacing: 3.0) {
-                                Image("untradable")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                Text("shop_exclusive".localized)
-                                    .font(.footnote)
-                                    .foregroundColor(.white)
-                            }
-                            .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
-                            .padding([.vertical], 2.0)
-                            .padding([.horizontal], 6.0)
-                        }
-                        .background(Color.init(hex: "#B82100"))
-                        .cornerRadius(4)
+                        ItemShopExclusiveView()
                     }
                     
-                    ZStack {
-                        HStack(spacing: 3.0) {
-                            Image("credits")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                            Text(item.price > 0 ? "\(item.price)" : "price_free".localized)
-                                .font(.footnote)
-                                .foregroundColor(.white)
-                        }
-                        .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
-                        .padding([.vertical], 2.0)
-                        .padding([.horizontal], 6.0)
-                    }
-                    .background(Color.init(hex: "#111111"))
-                    .cornerRadius(4)
+                    ItemPriceView(price: item.price)
                 }
                 .padding([.top], 24.0)
             }
@@ -170,6 +142,48 @@ extension ShopItemView {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
+        }
+    }
+    
+    struct ItemShopExclusiveView: View {
+        var body: some View {
+            ZStack {
+                HStack(spacing: 3.0) {
+                    Image("untradable")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    Text("shop_exclusive".localized)
+                        .font(.footnote)
+                        .foregroundColor(.white)
+                }
+                .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
+                .padding([.vertical], 2.0)
+                .padding([.horizontal], 6.0)
+            }
+            .background(Color.init(hex: "#B82100"))
+            .cornerRadius(4)
+        }
+    }
+    
+    struct ItemPriceView: View {
+        let price: Int
+        
+        var body: some View {
+            ZStack {
+                HStack(spacing: 3.0) {
+                    Image("credits")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    Text(price > 0 ? "\(price)" : "price_free".localized)
+                        .font(.footnote)
+                        .foregroundColor(.white)
+                }
+                .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
+                .padding([.vertical], 2.0)
+                .padding([.horizontal], 6.0)
+            }
+            .background(Color.init(hex: "#111111"))
+            .cornerRadius(4)
         }
     }
 
