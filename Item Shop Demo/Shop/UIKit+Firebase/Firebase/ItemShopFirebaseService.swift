@@ -1,5 +1,5 @@
 //
-//  ItemShopService.swift
+//  ItemShopFirebaseService.swift
 //  RL Trading Post
 //
 //  Created by Michael Hinton on 2/27/21.
@@ -9,11 +9,11 @@
 import FirebaseFirestore
 import Foundation
 
-class ItemShopService: NSObject {
+class ItemShopFirebaseService: NSObject {
 
     let itemShopCollectionPath = "itemShop"
 
-    static let shared = ItemShopService()
+    static let shared = ItemShopFirebaseService()
 
     private var shopListenerRegistration: ListenerRegistration?
 

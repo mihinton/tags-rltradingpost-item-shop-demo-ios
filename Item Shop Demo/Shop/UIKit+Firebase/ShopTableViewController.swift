@@ -97,7 +97,7 @@ class ShopTableViewController: UITableViewController {
     }
     
     private func setupShopFirebaseListener() {
-        ItemShopService.shared.getShop(date: "2021-10-26") { [weak self] (shopRotation) in
+        ItemShopFirebaseService.shared.getShop(date: "2021-10-26") { [weak self] (shopRotation) in
             guard let self = self else { return }
             guard let shopRotation = shopRotation else {
                 self.shopRotation = nil

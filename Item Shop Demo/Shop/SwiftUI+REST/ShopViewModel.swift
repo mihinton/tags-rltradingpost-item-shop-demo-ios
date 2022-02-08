@@ -12,7 +12,7 @@ import SwiftUI
 class ShopViewModel: ObservableObject {
     @Published var shopRotation: ShopRotation? = nil
 
-    private let itemShopFetcher = ItemShopFetcher()
+    private let itemShopService = ItemShopService()
     private var disposables = Set<AnyCancellable>()
 
     init() {
@@ -20,7 +20,7 @@ class ShopViewModel: ObservableObject {
     }
 
     func fetchItemShop() {
-        itemShopFetcher.shopRotation()
+        itemShopService.getItemShop()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 switch value {

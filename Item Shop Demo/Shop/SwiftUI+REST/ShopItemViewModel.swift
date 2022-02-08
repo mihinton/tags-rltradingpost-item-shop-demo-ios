@@ -17,7 +17,7 @@ class ShopItemViewModel: ObservableObject {
 
     @Published var imageData: Data? = UIImage(named: "rl-trading-post-logo")?.pngData()
 
-    private let itemShopFetcher = ItemShopFetcher()
+    private let itemPictureService = ItemPictureService()
     private var disposables = Set<AnyCancellable>()
 
     var categoryImageFileName: String {
@@ -32,7 +32,7 @@ class ShopItemViewModel: ObservableObject {
     }
     
     private func getImageData() {
-        itemShopFetcher.itemData(urlString: item.imageUrl)
+        itemPictureService.getItemImageData(urlString: item.imageUrl)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
