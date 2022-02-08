@@ -18,7 +18,7 @@ struct ShopItem: Codable, Identifiable {
     var rarity: String
     var price: Int
     var isTradable: Bool
-    var imageUrl: String? = nil
+    var imageUrl: String
 
     enum CodingKeys: String, CodingKey {
         case name

@@ -53,12 +53,8 @@ class ItemShopTableViewCell: UITableViewCell {
     func set(item: ShopItem, isFeatured: Bool) {
         self.item = item
         
-        if let imageUrl = item.imageUrl {
-            itemImageView.image = nil
-            itemImageView.imageFromUrl(imageUrl)
-        } else {
-            itemImageView.image = UIImage(named: "logo")
-        }
+        itemImageView.image = nil
+        itemImageView.imageFromUrl(item.imageUrl)
         
         nameLabel.text = item.name
         rarityCategoryLabel.text = "rarity_category".localized(item.rarity.localized, item.category.localized)
