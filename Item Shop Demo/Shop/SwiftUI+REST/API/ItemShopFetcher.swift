@@ -11,6 +11,7 @@ import Foundation
 
 protocol ItemShopFetchable {
     func shopRotation() -> AnyPublisher<ShopRotation, FetchError>
+    func itemData(urlString: String) -> AnyPublisher<Data, URLError>
 }
 
 class ItemShopFetcher: ItemShopFetchable {
@@ -43,6 +44,14 @@ class ItemShopFetcher: ItemShopFetchable {
             .flatMap(maxPublishers: .max(1)) { pair in
                 decode(pair.data)
             }
+            .eraseToAnyPublisher()
+    }
+    
+    func itemData(urlString: String) -> AnyPublisher<Data, URLError> {
+        let url = URL(string: urlString)!
+        
+        return session.dataTaskPublisher(for: url)
+            .map(\.data)
             .eraseToAnyPublisher()
     }
 

@@ -102,26 +102,37 @@ struct ShopItemView: View {
                 setupContentHeight(geometry: geometry)
             })
             
-            let iconPadding: CGFloat = 10.0
-            HStack(spacing: 0.0) {
-                let iconSize = max(contentHeight - iconPadding * 2, .zero)
-                Image("rl-trading-post-logo")
-                    .resizable()
-                    .frame(width: iconSize, height: iconSize)
-                    .padding([.all], iconPadding)
-                
-                if viewModel.isFeatured {
-                    Image(viewModel.categoryImageFileName)
-                        .resizable()
-                        .frame(maxWidth: .infinity)
-                        .padding([.trailing], 10.0)
-                        .aspectRatio(contentMode: .fill)
-                        .opacity(0.05)
-                } else {
-                    Spacer()
+            if contentHeight > 0 {
+                let iconPadding: CGFloat = 10.0
+                HStack(spacing: 0.0) {
+                    let iconSize = max(contentHeight - iconPadding * 2, .zero)
+                    if let imageData = viewModel.imageData {
+                        Image(uiImage: UIImage(data: imageData) ?? UIImage())
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: iconSize, height: iconSize)
+                            .padding([.all], iconPadding)
+                    } else {
+                        Image("rl-trading-post-logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: iconSize, height: iconSize)
+                            .padding([.all], iconPadding)
+                    }
+                    
+                    if viewModel.isFeatured {
+                        Image(viewModel.categoryImageFileName)
+                            .resizable()
+                            .frame(maxWidth: .infinity)
+                            .padding([.trailing], 10.0)
+                            .aspectRatio(contentMode: .fill)
+                            .opacity(0.05)
+                    } else {
+                        Spacer()
+                    }
                 }
+                .frame(height: contentHeight)
             }
-            .frame(height: contentHeight)
         }
         .background(
             LinearGradient(
