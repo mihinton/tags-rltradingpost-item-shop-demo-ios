@@ -1,17 +1,17 @@
 //
-//  ColorUtils.swift
+//  ShopItem+Color.swift
 //  Item Shop Demo
 //
-//  Created by Michael Hinton on 10/29/21.
-//  Copyright © 2021 HinTech, LLC. All rights reserved.
+//  Created by Michael Hinton on 2/7/22.
+//  Copyright © 2022 HinTech, LLC. All rights reserved.
 //
 
 import UIKit
 
-class ColorUtils {
+extension ShopItem {
 
-    static func getPaintedColor(_ color: String) -> UIColor {
-        switch color {
+    var paintUiColor: UIColor {
+        switch paint {
         case "Black":
             return .blackPainted
         case "Burnt Sienna":
@@ -42,8 +42,14 @@ class ColorUtils {
             return .black
         }
     }
-    
-    static func getRarityColor(_ rarity: String) -> UIColor {
+
+    var isPaintLight: Bool {
+        if paint == "None" { return false }
+        let lightColors = ["Lime", "Orange", "Saffron", "Titanium White"]
+        return lightColors.contains(paint)
+    }
+
+    var rarityUiColor: UIColor {
         switch rarity {
         case "Common":
             return .commonRarity

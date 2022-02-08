@@ -69,15 +69,15 @@ extension ShopItemView {
                     .cornerRadius(4)
                     .opacity(item.certification != "None" ? 1.0 : 0.0)
                     
-                    if item.color != "None" {
+                    if item.paint != "None" {
                         ZStack {
-                            Text(item.color.localized)
+                            Text(item.paint.localized)
                                 .font(.footnote)
-                                .foregroundColor(.white)
+                                .foregroundColor(item.isPaintLight ? .black : .white)
                                 .padding([.vertical], 3.0)
                                 .padding([.horizontal], 6.0)
                         }
-                        .background(Color(ColorUtils.getPaintedColor(item.color)))
+                        .background(Color(item.paintUiColor))
                         .cornerRadius(4)
                     }
                 }
@@ -137,7 +137,7 @@ extension ShopItemView {
                 gradient: Gradient(stops: [
                     .init(color: .black, location: 0.0),
                     .init(color: .black, location: 0.35),
-                    .init(color: Color(ColorUtils.getRarityColor(item.rarity)), location: 1.0)
+                    .init(color: Color(item.rarityUiColor), location: 1.0)
                 ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing

@@ -62,10 +62,10 @@ class ItemShopTableViewCell: UITableViewCell {
         certificationContainerView.alpha = item.certification != "None" ? 1.0 : 0
         certificationLabel.text = item.certification.localized
         
-        colorContainerView.isHidden = item.color == "None"
-        colorContainerView.backgroundColor = ColorUtils.getPaintedColor(item.color)
-        colorLabel.text = item.color.localized
-        colorLabel.textColor = getTextColor(color: item.color)
+        colorContainerView.isHidden = item.paint == "None"
+        colorContainerView.backgroundColor = item.paintUiColor
+        colorLabel.text = item.paint.localized
+        colorLabel.textColor = getTextColor(color: item.paint)
         
         priceLabel.text = item.price > 0 ? String(item.price) : "FREE".localized
         notTradableView.isHidden = item.isTradable
@@ -82,7 +82,7 @@ class ItemShopTableViewCell: UITableViewCell {
         }
         
         let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.black.cgColor, ColorUtils.getRarityColor(item.rarity).cgColor]
+        gradient.colors = [UIColor.black.cgColor, item.rarityUiColor.cgColor]
         gradient.locations = [0.35, 1.0]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradient.endPoint = CGPoint(x: 1.0, y: 1.0)

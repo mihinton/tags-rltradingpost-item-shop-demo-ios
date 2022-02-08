@@ -16,7 +16,7 @@ extension ShopRotation {
                 ShopItem(
                     name: "Vampire Bat",
                     category: "Goal Explosion",
-                    color: "Cobalt",
+                    paint: "Cobalt",
                     certification: "None",
                     rarity: "Import",
                     price: 700,
@@ -26,7 +26,7 @@ extension ShopRotation {
                 ShopItem(
                     name: "Slipstream",
                     category: "Decal",
-                    color: "Cobalt",
+                    paint: "Cobalt",
                     certification: "None",
                     rarity: "Black Market",
                     price: 2200,
@@ -40,7 +40,7 @@ extension ShopRotation {
                 ShopItem(
                     name: "Breakout: Heiwa",
                     category: "Decal",
-                    color: "Sky Blue",
+                    paint: "Sky Blue",
                     certification: "None",
                     rarity: "Rare",
                     price: 100,
@@ -50,7 +50,7 @@ extension ShopRotation {
                 ShopItem(
                     name: "Magic Missile",
                     category: "Rocket Boost",
-                    color: "Black",
+                    paint: "Black",
                     certification: "None",
                     rarity: "Import",
                     price: 600,
@@ -60,7 +60,7 @@ extension ShopRotation {
                 ShopItem(
                     name: "Yuzo",
                     category: "Wheels",
-                    color: "Orange",
+                    paint: "Orange",
                     certification: "None",
                     rarity: "Very Rare",
                     price: 300,
@@ -70,7 +70,7 @@ extension ShopRotation {
                 ShopItem(
                     name: "Masamune",
                     category: "Body",
-                    color: "Forest Green",
+                    paint: "Forest Green",
                     certification: "None",
                     rarity: "Very Rare",
                     price: 400,
@@ -80,7 +80,7 @@ extension ShopRotation {
                 ShopItem(
                     name: "Masamune: Trihedron",
                     category: "Decal",
-                    color: "Lime",
+                    paint: "Lime",
                     certification: "None",
                     rarity: "Rare",
                     price: 100,
@@ -90,7 +90,7 @@ extension ShopRotation {
                 ShopItem(
                     name: "Masamune: Druk",
                     category: "Decal",
-                    color: "Grey",
+                    paint: "Grey",
                     certification: "None",
                     rarity: "Rare",
                     price: 100,

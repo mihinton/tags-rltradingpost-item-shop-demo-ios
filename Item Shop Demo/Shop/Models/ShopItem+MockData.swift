@@ -14,7 +14,7 @@ extension ShopItem {
         return ShopItem(
             name: "Vampire Bat",
             category: "Goal Explosion",
-            color: "Cobalt",
+            paint: "Cobalt",
             certification: "None",
             rarity: "Import",
             price: 700,

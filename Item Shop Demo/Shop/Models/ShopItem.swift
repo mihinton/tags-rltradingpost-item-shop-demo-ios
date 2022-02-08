@@ -13,7 +13,7 @@ struct ShopItem: Codable, Identifiable {
     var id = UUID()
     var name: String
     var category: String
-    var color: String
+    var paint: String
     var certification: String
     var rarity: String
     var price: Int
@@ -23,7 +23,7 @@ struct ShopItem: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case name
         case category
-        case color
+        case paint = "color"
         case certification
         case rarity
         case price
