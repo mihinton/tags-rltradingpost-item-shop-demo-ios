@@ -135,11 +135,10 @@ extension ShopItemView {
         var body: some View {
             LinearGradient(
                 gradient: Gradient(stops: [
-                    .init(color: .black, location: 0.0),
-                    .init(color: .black, location: 0.35),
+                    .init(color: .black, location: -0.1),
                     .init(color: Color(item.rarityUiColor), location: 1.0)
                 ]),
-                startPoint: .topLeading,
+                startPoint: .top,
                 endPoint: .bottomTrailing
             )
         }
