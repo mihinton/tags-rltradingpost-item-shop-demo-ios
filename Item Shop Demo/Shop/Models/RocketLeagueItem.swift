@@ -32,3 +32,13 @@ struct RocketLeagueItem: Codable, Identifiable {
     }
 
 }
+
+extension RocketLeagueItem {
+    var isPainted: Bool {
+        return paint != "None"
+    }
+    
+    var isCertified: Bool {
+        return certification != "None"
+    }
+}

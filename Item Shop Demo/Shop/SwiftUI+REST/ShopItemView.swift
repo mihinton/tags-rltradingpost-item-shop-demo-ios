@@ -67,9 +67,9 @@ extension ShopItemView {
                     }
                     .background(Color.init(hex: "#80000000"))
                     .cornerRadius(4)
-                    .opacity(item.certification != "None" ? 1.0 : 0.0)
+                    .opacity(item.isCertified ? 1.0 : 0.0)
                     
-                    if item.paint != "None" {
+                    if item.isPainted {
                         ZStack {
                             Text(item.paint.localized)
                                 .font(.footnote)
