@@ -1,6 +1,6 @@
 //
-//  ShopItem.swift
-//  RL Trading Post
+//  RocketLeagueItem.swift
+//  Item Shop Demo
 //
 //  Created by Michael Hinton on 2/27/21.
 //  Copyright © 2021 HinTech, LLC. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ShopItem: Codable, Identifiable {
+struct RocketLeagueItem: Codable, Identifiable {
 
     var id = UUID()
     var name: String

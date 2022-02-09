@@ -19,7 +19,7 @@ class ItemShopFirebaseService: NSObject {
 
     private override init() {}
 
-    func getShop(date: String, completion: @escaping (ShopRotation?) -> ()) {
+    func getShop(date: String, completion: @escaping (ItemShop?) -> ()) {
         shopListenerRegistration?.remove()
         
         shopListenerRegistration = Firestore.firestore()
@@ -32,8 +32,8 @@ class ItemShopFirebaseService: NSObject {
                 }
                 
                 do {
-                    let shopRotation = try snapshot.data(as: ShopRotation.self)
-                    completion(shopRotation)
+                    let itemShop = try snapshot.data(as: ItemShop.self)
+                    completion(itemShop)
                 } catch {
                     print(error)
                     completion(nil)

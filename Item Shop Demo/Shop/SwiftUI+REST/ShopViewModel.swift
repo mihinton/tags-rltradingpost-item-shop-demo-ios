@@ -10,7 +10,7 @@ import Combine
 import SwiftUI
 
 class ShopViewModel: ObservableObject {
-    @Published var shopRotation: ShopRotation? = nil
+    @Published var itemShop: ItemShop? = nil
 
     private let itemShopService = ItemShopService()
     private var disposables = Set<AnyCancellable>()
@@ -25,12 +25,12 @@ class ShopViewModel: ObservableObject {
             .sink { [weak self] value in
                 switch value {
                 case .failure:
-                    self?.shopRotation = nil
+                    self?.itemShop = nil
                 case .finished:
                     break
                 }
             } receiveValue: { [weak self] shop in
-                self?.shopRotation = shop
+                self?.itemShop = shop
             }
             .store(in: &disposables)
     }

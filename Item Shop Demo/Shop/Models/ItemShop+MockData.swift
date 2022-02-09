@@ -1,5 +1,5 @@
 //
-//  ShopRotation+MockData.swift
+//  ItemShop+MockData.swift
 //  Item Shop Demo
 //
 //  Created by Michael Hinton on 2/4/22.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-extension ShopRotation {
+extension ItemShop {
 
     static func fake() -> Self {
-        return ShopRotation(
+        return ItemShop(
             featuredItems: [
-                ShopItem(
+                RocketLeagueItem(
                     name: "Vampire Bat",
                     category: "Goal Explosion",
                     paint: "Cobalt",
@@ -23,7 +23,7 @@ extension ShopRotation {
                     isTradable: true,
                     imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/VampireBat.png"
                 ),
-                ShopItem(
+                RocketLeagueItem(
                     name: "Slipstream",
                     category: "Decal",
                     paint: "Cobalt",
@@ -37,7 +37,7 @@ extension ShopRotation {
             featuredStartDate: Date(),
             featuredEndDate: .nextShopRefresh,
             dailyItems: [
-                ShopItem(
+                RocketLeagueItem(
                     name: "Breakout: Heiwa",
                     category: "Decal",
                     paint: "Sky Blue",
@@ -47,7 +47,7 @@ extension ShopRotation {
                     isTradable: true,
                     imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/BreakoutHeiwa.png"
                 ),
-                ShopItem(
+                RocketLeagueItem(
                     name: "Magic Missile",
                     category: "Rocket Boost",
                     paint: "Black",
@@ -57,7 +57,7 @@ extension ShopRotation {
                     isTradable: true,
                     imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/MagicMissile.png"
                 ),
-                ShopItem(
+                RocketLeagueItem(
                     name: "Yuzo",
                     category: "Wheels",
                     paint: "Orange",
@@ -67,7 +67,7 @@ extension ShopRotation {
                     isTradable: true,
                     imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/Yuzo-Orange.png"
                 ),
-                ShopItem(
+                RocketLeagueItem(
                     name: "Masamune",
                     category: "Body",
                     paint: "Forest Green",
@@ -77,7 +77,7 @@ extension ShopRotation {
                     isTradable: false,
                     imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/Masamune-ForestGreen.png"
                 ),
-                ShopItem(
+                RocketLeagueItem(
                     name: "Masamune: Trihedron",
                     category: "Decal",
                     paint: "Lime",
@@ -87,7 +87,7 @@ extension ShopRotation {
                     isTradable: false,
                     imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/Decal-MasamuneTrihedron-Purple.png"
                 ),
-                ShopItem(
+                RocketLeagueItem(
                     name: "Masamune: Druk",
                     category: "Decal",
                     paint: "Grey",

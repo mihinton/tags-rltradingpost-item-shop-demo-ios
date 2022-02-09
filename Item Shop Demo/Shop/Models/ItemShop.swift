@@ -1,6 +1,6 @@
 //
-//  ShopRotation.swift
-//  RL Trading Post
+//  ItemShop.swift
+//  Item Shop Demo
 //
 //  Created by Michael Hinton on 2/27/21.
 //  Copyright © 2021 HinTech, LLC. All rights reserved.
@@ -9,13 +9,13 @@
 import FirebaseFirestoreSwift
 import Foundation
 
-struct ShopRotation: Codable {
+struct ItemShop: Codable {
 
     @DocumentID var key: String?
-    var featuredItems: [ShopItem] = []
+    var featuredItems: [RocketLeagueItem] = []
     var featuredStartDate: Date
     var featuredEndDate: Date
-    var dailyItems: [ShopItem] = []
+    var dailyItems: [RocketLeagueItem] = []
     var dailyStartDate: Date
     var dailyEndDate: Date
     var message: String?

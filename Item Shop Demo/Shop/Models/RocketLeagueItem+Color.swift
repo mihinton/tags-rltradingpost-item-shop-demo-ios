@@ -1,5 +1,5 @@
 //
-//  ShopItem+Color.swift
+//  RocketLeagueItem+Color.swift
 //  Item Shop Demo
 //
 //  Created by Michael Hinton on 2/7/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ShopItem {
+extension RocketLeagueItem {
 
     var paintUiColor: UIColor {
         switch paint {

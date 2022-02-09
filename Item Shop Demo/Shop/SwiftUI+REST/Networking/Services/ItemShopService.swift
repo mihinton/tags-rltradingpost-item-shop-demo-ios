@@ -12,7 +12,7 @@ import Foundation
 protocol ItemShopServiceProtocol: AnyObject {
     var networker: NetworkerProtocol { get }
     
-    func getItemShop() -> AnyPublisher<ShopRotation, Error>
+    func getItemShop() -> AnyPublisher<ItemShop, Error>
 }
 
 final class ItemShopService: ItemShopServiceProtocol {
@@ -23,10 +23,10 @@ final class ItemShopService: ItemShopServiceProtocol {
         self.networker = networker
     }
     
-    func getItemShop() -> AnyPublisher<ShopRotation, Error> {
+    func getItemShop() -> AnyPublisher<ItemShop, Error> {
         let endpoint = Endpoint.itemShop
         
-        return networker.get(type: ShopRotation.self,
+        return networker.get(type: ItemShop.self,
                              url: endpoint.url,
                              headers: endpoint.headers)
     }

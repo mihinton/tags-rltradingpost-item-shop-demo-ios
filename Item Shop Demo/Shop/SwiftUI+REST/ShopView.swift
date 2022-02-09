@@ -18,8 +18,8 @@ struct ShopView: View {
                 LazyVStack(spacing: .zero, pinnedViews: [.sectionHeaders]) {
                     CreatorCodeView()
                     
-                    if let shopRotation = viewModel.shopRotation {
-                        ShopContentView(shopRotation: shopRotation)
+                    if let itemShop = viewModel.itemShop {
+                        ShopContentView(itemShop: itemShop)
                         ShopFooterView()
                     } else {
                         Text("Loading ...")
@@ -74,7 +74,7 @@ private extension ShopView {
     }
     
     struct ShopContentView: View {
-        let shopRotation: ShopRotation
+        let itemShop: ItemShop
 
         var body: some View {
             VStack(spacing: 4.0) {
@@ -83,7 +83,7 @@ private extension ShopView {
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                if let message = shopRotation.message {
+                if let message = itemShop.message {
                     Text(message)
                         .font(.callout)
                         .foregroundColor(.primary)
@@ -97,11 +97,11 @@ private extension ShopView {
                 header: ShopSectionHeaderView(
                     viewModel: ShopSectionHeaderViewModel(
                         title: "featured_items_section_header".localized,
-                        endDate: shopRotation.featuredEndDate
+                        endDate: itemShop.featuredEndDate
                     )
                 )
             ) {
-                ForEach(shopRotation.featuredItems) { item in
+                ForEach(itemShop.featuredItems) { item in
                     ShopItemView(
                         viewModel: ShopItemViewModel(item: item, isFeatured: true)
                     )
@@ -112,11 +112,11 @@ private extension ShopView {
                 header: ShopSectionHeaderView(
                     viewModel: ShopSectionHeaderViewModel(
                         title: "daily_items_section_header".localized,
-                        endDate: shopRotation.dailyEndDate
+                        endDate: itemShop.dailyEndDate
                     )
                 )
             ) {
-                ForEach(shopRotation.dailyItems) { item in
+                ForEach(itemShop.dailyItems) { item in
                     ShopItemView(viewModel: ShopItemViewModel(item: item))
                 }
             }
@@ -145,7 +145,7 @@ struct ShopView_Previews: PreviewProvider {
     
     static func createPopulatedShopViewModel() -> ShopViewModel {
         let viewModel = ShopViewModel()
-        viewModel.shopRotation = ShopRotation.fake()
+        viewModel.itemShop = ItemShop.fake()
         return viewModel
     }
 }

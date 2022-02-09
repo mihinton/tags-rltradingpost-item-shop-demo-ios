@@ -15,7 +15,7 @@ class ShopTableViewController: UITableViewController {
 
     private var headerView: ItemShopHeaderView!
 
-    private var shopRotation: ShopRotation?
+    private var itemShop: ItemShop?
 
     private var timer: Timer?
 
@@ -34,44 +34,44 @@ class ShopTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return shopRotation != nil ? 2 : 0
+        return itemShop != nil ? 2 : 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == featuredItemsIndex {
-            return shopRotation?.featuredItems.count ?? 0
+            return itemShop?.featuredItems.count ?? 0
         } else if section == dailyItemsIndex {
-            return shopRotation?.dailyItems.count ?? 0
+            return itemShop?.dailyItems.count ?? 0
         }
         return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let shopRotation = shopRotation else {
+        guard let itemShop = itemShop else {
             return UITableViewCell()
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemShopTableViewCell", for: indexPath) as! ItemShopTableViewCell
         if indexPath.section == featuredItemsIndex {
-            cell.set(item: shopRotation.featuredItems[indexPath.row], isFeatured: true)
+            cell.set(item: itemShop.featuredItems[indexPath.row], isFeatured: true)
         } else {
-            cell.set(item: shopRotation.dailyItems[indexPath.row], isFeatured: false)
+            cell.set(item: itemShop.dailyItems[indexPath.row], isFeatured: false)
         }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let shopRotation = shopRotation else {
+        guard let itemShop = itemShop else {
             return UIView()
         }
         
         let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ItemShopTableViewHeaderFooterView") as! ItemShopTableViewHeaderFooterView
         if section == featuredItemsIndex {
             cell.headerLabel.text = "featured_items_section_header".localized
-            cell.setExpiration(date: shopRotation.featuredEndDate)
+            cell.setExpiration(date: itemShop.featuredEndDate)
         } else if section == dailyItemsIndex {
             cell.headerLabel.text = "daily_items_section_header".localized
-            cell.setExpiration(date: shopRotation.dailyEndDate)
+            cell.setExpiration(date: itemShop.dailyEndDate)
         } else {
             cell.headerLabel.text = ""
         }
@@ -97,10 +97,10 @@ class ShopTableViewController: UITableViewController {
     }
     
     private func setupShopFirebaseListener() {
-        ItemShopFirebaseService.shared.getShop(date: "2021-10-26") { [weak self] (shopRotation) in
+        ItemShopFirebaseService.shared.getShop(date: "2021-10-26") { [weak self] (itemShop) in
             guard let self = self else { return }
-            guard let shopRotation = shopRotation else {
-                self.shopRotation = nil
+            guard let itemShop = itemShop else {
+                self.itemShop = nil
                 let footerView = ItemShopUnavailableFooterView(frame: self.tableView.frame)
                 self.tableView.tableFooterView = footerView
                 self.tableView.reloadData()
@@ -108,14 +108,14 @@ class ShopTableViewController: UITableViewController {
                 return
             }
             
-            self.shopRotation = shopRotation
+            self.itemShop = itemShop
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .full
-            self.headerView.dateLabel.text = dateFormatter.string(from: shopRotation.dailyStartDate)
+            self.headerView.dateLabel.text = dateFormatter.string(from: itemShop.dailyStartDate)
             
-            self.headerView.messageTextView.isHidden = shopRotation.message?.isEmpty ?? true
-            self.headerView.messageTextView.text = shopRotation.message ?? ""
+            self.headerView.messageTextView.isHidden = itemShop.message?.isEmpty ?? true
+            self.headerView.messageTextView.text = itemShop.message ?? ""
             
             let footerView = ItemShopFooterView(frame: self.tableView.frame)
             self.tableView.tableFooterView = footerView

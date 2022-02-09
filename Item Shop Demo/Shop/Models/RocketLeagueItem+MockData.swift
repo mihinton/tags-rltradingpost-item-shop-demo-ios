@@ -1,5 +1,5 @@
 //
-//  ShopItem+MockData.swift
+//  RocketLeagueItem+MockData.swift
 //  Item Shop Demo
 //
 //  Created by Michael Hinton on 2/4/22.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension ShopItem {
+extension RocketLeagueItem {
 
     static func fake() -> Self {
-        return ShopItem(
+        return RocketLeagueItem(
             name: "Vampire Bat",
             category: "Goal Explosion",
             paint: "Cobalt",

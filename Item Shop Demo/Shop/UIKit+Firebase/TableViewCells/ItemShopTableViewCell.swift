@@ -27,7 +27,7 @@ class ItemShopTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var notTradableView: UIView!
 
-    private var item: ShopItem!
+    private var item: RocketLeagueItem!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,7 +50,7 @@ class ItemShopTableViewCell: UITableViewCell {
         addGradientBackground()
     }
     
-    func set(item: ShopItem, isFeatured: Bool) {
+    func set(item: RocketLeagueItem, isFeatured: Bool) {
         self.item = item
         
         itemImageView.image = nil

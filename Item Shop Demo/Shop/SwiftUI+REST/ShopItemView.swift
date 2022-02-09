@@ -42,7 +42,7 @@ struct ShopItemView: View {
 extension ShopItemView {
 
     struct ItemInformationView: View {
-        let item: ShopItem
+        let item: RocketLeagueItem
         
         var body: some View {
             VStack(spacing: 0.0) {
@@ -130,7 +130,7 @@ extension ShopItemView {
     }
     
     struct ItemCardBackgroundView: View {
-        let item: ShopItem
+        let item: RocketLeagueItem
         
         var body: some View {
             LinearGradient(
@@ -193,7 +193,7 @@ struct ShopItemView_Previews: PreviewProvider {
     static var previews: some View {
         ShopItemView(
             viewModel: ShopItemViewModel(
-                item: ShopItem.fake(),
+                item: RocketLeagueItem.fake(),
                 isFeatured: true
             )
         )

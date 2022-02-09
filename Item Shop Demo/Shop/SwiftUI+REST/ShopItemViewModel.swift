@@ -12,7 +12,7 @@ import UIKit
 
 class ShopItemViewModel: ObservableObject {
 
-    let item: ShopItem
+    let item: RocketLeagueItem
     let isFeatured: Bool
 
     @Published var imageData: Data? = UIImage(named: "rl-trading-post-logo")?.pngData()
@@ -24,7 +24,7 @@ class ShopItemViewModel: ObservableObject {
         return item.category.lowercased().replacingOccurrences(of: " ", with: "-")
     }
 
-    init(item: ShopItem, isFeatured: Bool = false) {
+    init(item: RocketLeagueItem, isFeatured: Bool = false) {
         self.item = item
         self.isFeatured = isFeatured
         
