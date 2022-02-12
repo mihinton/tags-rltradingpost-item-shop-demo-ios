@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ShopItemView: View {
 
-    let viewModel: ShopItemViewModel
+    @ObservedObject var viewModel: ShopItemViewModel
 
     @State private var contentHeight: CGFloat = .zero
 
@@ -99,7 +99,7 @@ extension ShopItemView {
     }
     
     struct ItemIconsView: View {
-        let viewModel: ShopItemViewModel
+        @ObservedObject var viewModel: ShopItemViewModel
         let contentHeight: CGFloat
         
         var body: some View {
