@@ -16,16 +16,16 @@ struct ShopItemView: View {
 
     var body: some View {
         ZStack {
+            if contentHeight > 0 {
+                ItemIconsView(viewModel: viewModel, contentHeight: contentHeight)
+            }
+            
             ItemInformationView(item: viewModel.item)
                 .background(GeometryReader { geometry in
                     // I know this isn't great,
                     // but I couldn't get PreferenceKey to work here
                     setupContentHeight(geometry: geometry)
                 })
-            
-            if contentHeight > 0 {
-                ItemIconsView(viewModel: viewModel, contentHeight: contentHeight)
-            }
         }
         .background(ItemCardBackgroundView(item: viewModel.item))
         .cornerRadius(10)
