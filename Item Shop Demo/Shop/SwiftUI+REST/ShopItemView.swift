@@ -49,6 +49,7 @@ extension ShopItemView {
                 Text(item.name)
                     .font(.title)
                     .foregroundColor(.white)
+                    .shadow(color: .black, radius: 4.0, x: 0, y: 0)
                     .frame(maxWidth: .infinity, alignment: .trailing)
                 Text("rarity_category".localized(item.rarity.localized, item.category.localized))
                     .font(.subheadline)
