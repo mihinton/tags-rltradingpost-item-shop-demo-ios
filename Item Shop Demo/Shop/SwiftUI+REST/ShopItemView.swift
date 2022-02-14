@@ -97,6 +97,48 @@ extension ShopItemView {
             }
             .padding([.all], 10.0)
         }
+        
+        struct ItemShopExclusiveView: View {
+            var body: some View {
+                ZStack {
+                    HStack(spacing: 3.0) {
+                        Image("untradable")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        Text("shop_exclusive".localized)
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                    }
+                    .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
+                    .padding([.vertical], 2.0)
+                    .padding([.horizontal], 6.0)
+                }
+                .background(Color.init(hex: "#B82100"))
+                .cornerRadius(4)
+            }
+        }
+        
+        struct ItemPriceView: View {
+            let price: Int
+            
+            var body: some View {
+                ZStack {
+                    HStack(spacing: 3.0) {
+                        Image("credits")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        Text(price > 0 ? "\(price)" : "price_free".localized)
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                    }
+                    .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
+                    .padding([.vertical], 2.0)
+                    .padding([.horizontal], 6.0)
+                }
+                .background(Color.init(hex: "#111111"))
+                .cornerRadius(4)
+            }
+        }
     }
     
     struct ItemIconsView: View {
@@ -142,48 +184,6 @@ extension ShopItemView {
                 startPoint: .top,
                 endPoint: .bottomTrailing
             )
-        }
-    }
-    
-    struct ItemShopExclusiveView: View {
-        var body: some View {
-            ZStack {
-                HStack(spacing: 3.0) {
-                    Image("untradable")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    Text("shop_exclusive".localized)
-                        .font(.footnote)
-                        .foregroundColor(.white)
-                }
-                .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
-                .padding([.vertical], 2.0)
-                .padding([.horizontal], 6.0)
-            }
-            .background(Color.init(hex: "#B82100"))
-            .cornerRadius(4)
-        }
-    }
-    
-    struct ItemPriceView: View {
-        let price: Int
-        
-        var body: some View {
-            ZStack {
-                HStack(spacing: 3.0) {
-                    Image("credits")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    Text(price > 0 ? "\(price)" : "price_free".localized)
-                        .font(.footnote)
-                        .foregroundColor(.white)
-                }
-                .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
-                .padding([.vertical], 2.0)
-                .padding([.horizontal], 6.0)
-            }
-            .background(Color.init(hex: "#111111"))
-            .cornerRadius(4)
         }
     }
 

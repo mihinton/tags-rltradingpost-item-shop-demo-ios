@@ -18,7 +18,8 @@ struct RocketLeagueItem: Codable, Identifiable {
     var rarity: String
     var price: Int
     var isTradable: Bool
-    var imageUrl: String
+    var iconUrl: String
+    var previewUrl: String?
 
     enum CodingKeys: String, CodingKey {
         case name
@@ -28,7 +29,8 @@ struct RocketLeagueItem: Codable, Identifiable {
         case rarity
         case price
         case isTradable = "tradable"
-        case imageUrl
+        case iconUrl = "imageUrl"
+        case previewUrl
     }
 
 }

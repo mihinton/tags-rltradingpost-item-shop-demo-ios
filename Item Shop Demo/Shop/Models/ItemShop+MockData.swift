@@ -21,7 +21,7 @@ extension ItemShop {
                     rarity: "Import",
                     price: 700,
                     isTradable: true,
-                    imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/VampireBat.png"
+                    iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/VampireBat.png"
                 ),
                 RocketLeagueItem(
                     name: "Slipstream",
@@ -31,7 +31,7 @@ extension ItemShop {
                     rarity: "Black Market",
                     price: 2200,
                     isTradable: true,
-                    imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/Slipstream.png"
+                    iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/Slipstream.png"
                 )
             ],
             featuredStartDate: Date(),
@@ -45,7 +45,7 @@ extension ItemShop {
                     rarity: "Rare",
                     price: 100,
                     isTradable: true,
-                    imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/BreakoutHeiwa.png"
+                    iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/BreakoutHeiwa.png"
                 ),
                 RocketLeagueItem(
                     name: "Magic Missile",
@@ -55,7 +55,7 @@ extension ItemShop {
                     rarity: "Import",
                     price: 600,
                     isTradable: true,
-                    imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/MagicMissile.png"
+                    iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/MagicMissile.png"
                 ),
                 RocketLeagueItem(
                     name: "Yuzo",
@@ -65,7 +65,7 @@ extension ItemShop {
                     rarity: "Very Rare",
                     price: 300,
                     isTradable: true,
-                    imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/Yuzo-Orange.png"
+                    iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/Yuzo-Orange.png"
                 ),
                 RocketLeagueItem(
                     name: "Masamune",
@@ -75,7 +75,7 @@ extension ItemShop {
                     rarity: "Very Rare",
                     price: 400,
                     isTradable: false,
-                    imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/Masamune-ForestGreen.png"
+                    iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/Masamune-ForestGreen.png"
                 ),
                 RocketLeagueItem(
                     name: "Masamune: Trihedron",
@@ -85,7 +85,7 @@ extension ItemShop {
                     rarity: "Rare",
                     price: 100,
                     isTradable: false,
-                    imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/Decal-MasamuneTrihedron-Purple.png"
+                    iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/Decal-MasamuneTrihedron-Purple.png"
                 ),
                 RocketLeagueItem(
                     name: "Masamune: Druk",
@@ -95,7 +95,7 @@ extension ItemShop {
                     rarity: "Rare",
                     price: 100,
                     isTradable: false,
-                    imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/Decal-MasamuneDruk-Purple.png"
+                    iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/Decal-MasamuneDruk-Purple.png"
                 )
             ],
             dailyStartDate: Date(),

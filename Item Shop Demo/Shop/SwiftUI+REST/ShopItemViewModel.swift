@@ -32,7 +32,7 @@ class ShopItemViewModel: ObservableObject {
     }
     
     private func getImageData() {
-        itemPictureService.getItemImageData(urlString: item.imageUrl)
+        itemPictureService.getItemImageData(urlString: item.iconUrl)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {

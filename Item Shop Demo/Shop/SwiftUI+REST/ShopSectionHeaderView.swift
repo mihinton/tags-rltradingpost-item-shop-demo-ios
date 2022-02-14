@@ -47,7 +47,7 @@ struct ShopSectionHeaderView_Previews: PreviewProvider {
         ShopSectionHeaderView(viewModel: createPopulatedSectionHeaderViewModel())
     }
     
-    static func createPopulatedSectionHeaderViewModel() -> ShopSectionHeaderViewModel {
+    private static func createPopulatedSectionHeaderViewModel() -> ShopSectionHeaderViewModel {
         let viewModel = ShopSectionHeaderViewModel(
             title: "Featured Items",
             endDate: .nextShopRefresh

@@ -39,3 +39,5 @@
 "The current Item Shop is not yet available to view in RL Trading Post. Please note that the Item Shop feature is in beta and we're working to make adding the Item Shop a faster, automated process.  This page will refresh as soon as the new Item Shop items are available.  Thank you for your patience!" = "The current Item Shop is not yet available to view in RL Trading Post. Please note that the Item Shop feature is in beta and we're working to make adding the Item Shop a faster, automated process.\n\nThis page will refresh as soon as the new Item Shop items are available.\n\nThank you for your patience!";
 "rarity_category" = "%1$@ %2$@";
 "price_free" = "FREE";
+
+"color_and_item_name" = "%1$@ %2$@";

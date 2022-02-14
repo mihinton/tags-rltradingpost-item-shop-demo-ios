@@ -54,7 +54,7 @@ class ItemShopTableViewCell: UITableViewCell {
         self.item = item
         
         itemImageView.image = nil
-        itemImageView.imageFromUrl(item.imageUrl)
+        itemImageView.imageFromUrl(item.iconUrl)
         
         nameLabel.text = item.name
         rarityCategoryLabel.text = "rarity_category".localized(item.rarity.localized, item.category.localized)

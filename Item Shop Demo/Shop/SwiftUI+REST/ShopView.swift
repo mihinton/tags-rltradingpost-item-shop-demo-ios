@@ -102,9 +102,13 @@ private extension ShopView {
                 )
             ) {
                 ForEach(itemShop.featuredItems) { item in
-                    ShopItemView(
-                        viewModel: ShopItemViewModel(item: item, isFeatured: true)
-                    )
+                    NavigationLink(destination: ShopItemDetailsView(
+                        viewModel: ShopItemDetailsViewModel(item: item)
+                    )) {
+                        ShopItemView(
+                            viewModel: ShopItemViewModel(item: item, isFeatured: true)
+                        )
+                    }
                 }
             }
             
@@ -117,7 +121,13 @@ private extension ShopView {
                 )
             ) {
                 ForEach(itemShop.dailyItems) { item in
-                    ShopItemView(viewModel: ShopItemViewModel(item: item))
+                    NavigationLink(destination: ShopItemDetailsView(
+                        viewModel: ShopItemDetailsViewModel(item: item)
+                    )) {
+                        ShopItemView(
+                            viewModel: ShopItemViewModel(item: item)
+                        )
+                    }
                 }
             }
         }
@@ -143,7 +153,7 @@ struct ShopView_Previews: PreviewProvider {
         }
     }
     
-    static func createPopulatedShopViewModel() -> ShopViewModel {
+    private static func createPopulatedShopViewModel() -> ShopViewModel {
         let viewModel = ShopViewModel()
         viewModel.itemShop = ItemShop.fake()
         return viewModel

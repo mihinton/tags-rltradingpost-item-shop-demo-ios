@@ -19,7 +19,7 @@ extension RocketLeagueItem {
             rarity: "Import",
             price: 700,
             isTradable: true,
-            imageUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/VampireBat.png"
+            iconUrl: "https://s3.us-east-2.amazonaws.com/i.rltradingpost.net/DemoImages/VampireBat.png"
         )
     }
 
