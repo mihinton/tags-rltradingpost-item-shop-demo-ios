@@ -14,11 +14,10 @@ struct ShopItemDetailsView: View {
     let viewModel: ShopItemDetailsViewModel
 
     var body: some View {
-        let player = AVPlayer(url: URL(string: viewModel.item.previewUrl!)!)
         ScrollView {
             LazyVStack(spacing: .zero, pinnedViews: [.sectionHeaders]) {
                 GeometryReader { metrics in
-                    VideoPlayer(player: player)
+                    LoopingPlayerView(url: viewModel.item.previewUrl!)
                         .cornerRadius(10)
                         .frame(height: metrics.size.width * 9.0 / 16.0)
                 }
@@ -29,9 +28,6 @@ struct ShopItemDetailsView: View {
         .background(Color("PrimaryBackgroundColor"))
         .navigationTitle(viewModel.title)
         .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            player.play()
-        }
     }
 
 }

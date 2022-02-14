@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243E3F7627BAFBDB004EEDE1 /* LoopingPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E3F7527BAFBDB004EEDE1 /* LoopingPlayerView.swift */; };
 		2482D5AE27B225FD001EC81A /* RocketLeagueItem+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482D5AD27B225FD001EC81A /* RocketLeagueItem+Color.swift */; };
 		2482D5B027B2FA02001EC81A /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482D5AF27B2FA02001EC81A /* Networker.swift */; };
 		2482D5B227B2FB05001EC81A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482D5B127B2FB05001EC81A /* NetworkError.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243E3F7527BAFBDB004EEDE1 /* LoopingPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingPlayerView.swift; sourceTree = "<group>"; };
 		2482D5AD27B225FD001EC81A /* RocketLeagueItem+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketLeagueItem+Color.swift"; sourceTree = "<group>"; };
 		2482D5AF27B2FA02001EC81A /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		2482D5B127B2FB05001EC81A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243E3F7427BAFBBA004EEDE1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				243E3F7527BAFBDB004EEDE1 /* LoopingPlayerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		2482D5B527B2FB62001EC81A /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 		24941DF0272CB58400F6ACD6 /* SwiftUI+REST */ = {
 			isa = PBXGroup;
 			children = (
+				243E3F7427BAFBBA004EEDE1 /* Components */,
 				24B1C30327AC65E400B6864F /* Networking */,
 				24941DF1272CB6C300F6ACD6 /* ShopView.swift */,
 				24B1C30A27AC6B3800B6864F /* ShopViewModel.swift */,
@@ -433,6 +444,7 @@
 				24E2ECB526FE502B0017838A /* ItemShopUnavailableFooterView.swift in Sources */,
 				24E2EC7C26FE217E0017838A /* ShopTableViewController.swift in Sources */,
 				24B1C30F27AD755500B6864F /* ItemShop+MockData.swift in Sources */,
+				243E3F7627BAFBDB004EEDE1 /* LoopingPlayerView.swift in Sources */,
 				24E2EC9C26FE4FD10017838A /* ItemShopFirebaseService.swift in Sources */,
 				2482D5B427B2FB22001EC81A /* Endpoint.swift in Sources */,
 				24B1C30D27AD753200B6864F /* RocketLeagueItem+MockData.swift in Sources */,
