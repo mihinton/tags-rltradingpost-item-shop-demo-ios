@@ -64,9 +64,7 @@
 "featured_items_section_header" = "Empfohlene Items";
 "daily_items_section_header" = "Tägliche Items";
 "shop_exclusive" = "Shop-Exklusiv";
-"item_shop_footer" = "Gekaufte Items können nicht mit anderen Spielern getauscht werden.\n\nItems die mit \"Shop-Exklusiv\" gekennzeichnet sind, sind exklusiv im Item-Shop erhältlich und können nicht über den Handel mit anderen Spielern erworben werden.\n\nDieses Item-Shop-Feature wurde als \"Beta\" veröffentlicht, was bedeutet dass wir noch an einigen Dingen arbeiten und Verbesserungen vornehmen werden. Wenn Du Vorschläge oder Feedback für den Item-Shop hast, bitte sende eine Email an rltradingpostapp@gmail.com :)\n\nIn Verbindung mit dem Support-A-Creator Programm von Epic Games, kann RL Trading Post eine Provision von In-Game-Käufen erhalten, wenn Du den Creator Code \"RLTP\" benutzt.";
-"Item Shop not yet loaded" = "Der Item Shop hat noch nicht geladen";
-"The current Item Shop is not yet available to view in RL Trading Post. Please note that the Item Shop feature is in beta and we're working to make adding the Item Shop a faster, automated process.  This page will refresh as soon as the new Item Shop items are available.  Thank you for your patience!" = "Der aktuelle Item-Shop ist noch nicht verfügbar in RL Trading Post. Bitte beachte, dass sich das Item-Shop-Feature in der Beta befindet und wir daran arbeiten, den Item-Shop zu automatisieren.\n\nDiese Seite wird sich aktualisieren, sobald die neuen Item-Shop-Items verfügbar sind.\n\nDanke für deine Geduld!";
+"item_shop_footer" = "Gekaufte Items können nicht mit anderen Spielern getauscht werden.\n\nItems die mit \"Shop-Exklusiv\" gekennzeichnet sind, sind exklusiv im Item-Shop erhältlich und können nicht über den Handel mit anderen Spielern erworben werden.\n\nIn Verbindung mit dem Support-A-Creator Programm von Epic Games, kann RL Trading Post eine Provision von In-Game-Käufen erhalten, wenn Du den Creator Code \"RLTP\" benutzt.";
 "rarity_category" = "%1$@-%2$@";
 "price_free" = "GRATIS";
 

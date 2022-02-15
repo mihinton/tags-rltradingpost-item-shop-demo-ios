@@ -16,17 +16,16 @@ struct ShopView: View {
         NavigationView {
             ScrollView {
                 LazyVStack(spacing: .zero, pinnedViews: [.sectionHeaders]) {
-                    CreatorCodeView()
-                    
                     if let itemShop = viewModel.itemShop {
                         ShopContentView(itemShop: itemShop)
+                        CreatorCodeView()
                         ShopFooterView()
                     } else {
+                        CreatorCodeView()
                         Text("Loading ...")
                             .padding([.top], 20.0)
                     }
                 }
-                .padding([.vertical], 8.0)
             }
             .background(Color("PrimaryBackgroundColor"))
             .navigationTitle("todays_shop_title".localized)
@@ -51,7 +50,7 @@ private extension ShopView {
             }
             .background(Color(hex: "#1DABEB"))
             .cornerRadius(10)
-            .padding([.horizontal], 8.0)
+            .padding([.top, .horizontal], 8.0)
         }
     }
     
@@ -113,11 +112,11 @@ private extension ShopView {
     struct ShopFooterView: View {
         var body: some View {
             Text("item_shop_footer".localized)
-                .font(.caption2)
+                .font(.footnote)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding([.top, .horizontal], 8.0)
+                .padding([.all], 8.0)
         }
     }
 }
