@@ -13,7 +13,7 @@ final class ShopItemDetailsViewModel {
     let item: RocketLeagueItem
 
     var title: String {
-        return !item.isPainted ? item.name : "color_and_item_name".localized(item.paint, item.name)
+        return !item.isPainted ? item.name : "color_and_item_name".localized(item.paint.localized, item.name)
     }
 
     init(item: RocketLeagueItem) {
