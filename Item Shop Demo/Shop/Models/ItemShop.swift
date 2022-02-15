@@ -6,12 +6,10 @@
 //  Copyright © 2021 HinTech, LLC. All rights reserved.
 //
 
-import FirebaseFirestoreSwift
 import Foundation
 
 struct ItemShop: Codable {
 
-    @DocumentID var key: String?
     var featuredItems: [RocketLeagueItem] = []
     var featuredStartDate: Date
     var featuredEndDate: Date

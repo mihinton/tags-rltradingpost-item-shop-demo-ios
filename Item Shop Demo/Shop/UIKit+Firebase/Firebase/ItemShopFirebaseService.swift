@@ -20,25 +20,25 @@ class ItemShopFirebaseService: NSObject {
     private override init() {}
 
     func getShop(date: String, completion: @escaping (ItemShop?) -> ()) {
-        shopListenerRegistration?.remove()
-        
-        shopListenerRegistration = Firestore.firestore()
-            .collection(itemShopCollectionPath)
-            .document(date)
-            .addSnapshotListener { snapshot, _ in
-                guard let snapshot = snapshot else {
-                    completion(nil)
-                    return
-                }
-                
-                do {
-                    let itemShop = try snapshot.data(as: ItemShop.self)
-                    completion(itemShop)
-                } catch {
-                    print(error)
-                    completion(nil)
-                }
-            }
+//        shopListenerRegistration?.remove()
+//
+//        shopListenerRegistration = Firestore.firestore()
+//            .collection(itemShopCollectionPath)
+//            .document(date)
+//            .addSnapshotListener { snapshot, _ in
+//                guard let snapshot = snapshot else {
+//                    completion(nil)
+//                    return
+//                }
+//
+//                do {
+//                    let itemShop = try snapshot.data(as: ItemShop.self)
+//                    completion(itemShop)
+//                } catch {
+//                    print(error)
+//                    completion(nil)
+//                }
+//            }
     }
 
 }

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "243C51E427BBE53C00E2F147"
-               BuildableName = "Watch Item Shop Demo WatchKit App.app"
+               BuildableName = "Item Shop Demo.app"
                BlueprintName = "Watch Item Shop Demo WatchKit App"
                ReferencedContainer = "container:Item Shop Demo.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "de"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -56,16 +55,18 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       notificationPayloadFile = "Watch Item Shop Demo WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/(null)">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "243C51E427BBE53C00E2F147"
-            BuildableName = "Watch Item Shop Demo WatchKit App.app"
+            BuildableName = "Item Shop Demo.app"
             BlueprintName = "Watch Item Shop Demo WatchKit App"
             ReferencedContainer = "container:Item Shop Demo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -73,16 +74,27 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/(null)">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "243C51E427BBE53C00E2F147"
-            BuildableName = "Watch Item Shop Demo WatchKit App.app"
+            BuildableName = "Item Shop Demo.app"
             BlueprintName = "Watch Item Shop Demo WatchKit App"
             ReferencedContainer = "container:Item Shop Demo.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "243C51E427BBE53C00E2F147"
+            BuildableName = "Item Shop Demo.app"
+            BlueprintName = "Watch Item Shop Demo WatchKit App"
+            ReferencedContainer = "container:Item Shop Demo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

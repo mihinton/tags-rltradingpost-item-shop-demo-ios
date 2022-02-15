@@ -52,7 +52,7 @@ class ShopSectionHeaderViewModel: ObservableObject {
         seconds -= (minutes * secPerMin)
         
         if days > 0 {
-            return "\(getDaysText(days: days)) \(getHoursText(hours: hours)) \(getMinutesText(minutes: minutes))"
+            return "\(getDaysText(days: days)) \(getHoursText(hours: hours))"
         } else if hours > 0 {
             return "\(getHoursText(hours: hours)) \(getMinutesText(minutes: minutes))"
         } else if minutes > 0 {

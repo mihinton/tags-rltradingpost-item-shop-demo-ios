@@ -13,7 +13,7 @@ struct Item_Shop_DemoApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ShopView(viewModel: ShopViewModel())
             }
         }
 

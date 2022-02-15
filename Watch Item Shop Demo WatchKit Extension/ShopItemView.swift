@@ -1,8 +1,8 @@
 //
 //  ShopItemView.swift
-//  Item Shop Demo
+//  Watch Item Shop Demo WatchKit Extension
 //
-//  Created by Michael Hinton on 1/24/22.
+//  Created by Michael Hinton on 2/15/22.
 //  Copyright © 2022 HinTech, LLC. All rights reserved.
 //
 
@@ -29,8 +29,8 @@ struct ShopItemView: View {
         }
         .background(ItemCardBackgroundView(item: viewModel.item))
         .cornerRadius(10)
-        .padding([.vertical], 6.0)
-        .padding([.horizontal], 12.0)
+        .padding([.vertical], 4.0)
+        .padding([.horizontal], 8.0)
     }
     
     private func setupContentHeight(geometry: GeometryProxy) -> some View {
@@ -47,24 +47,25 @@ extension ShopItemView {
         var body: some View {
             VStack(spacing: .zero) {
                 Text(item.name)
-                    .font(.title)
+                    .font(.headline)
                     .foregroundColor(.white)
                     .shadow(color: .black, radius: 4.0, x: 0, y: 0)
                     .frame(maxWidth: .infinity, alignment: .trailing)
                 Text("rarity_category".localized(item.rarity.localized, item.category.localized))
-                    .font(.subheadline)
+                    .font(.footnote)
                     .foregroundColor(.white)
+                    .shadow(color: .black, radius: 4.0, x: 0, y: 0)
                     .frame(maxWidth: .infinity, alignment: .trailing)
                 
-                HStack(spacing: 6.0) {
+                HStack(spacing: 4) {
                     Spacer()
                     
                     ZStack {
                         Text(item.certification.localized)
                             .font(.footnote)
                             .foregroundColor(.white)
-                            .padding([.vertical], 3.0)
-                            .padding([.horizontal], 6.0)
+                            .padding([.vertical], 2.0)
+                            .padding([.horizontal], 4.0)
                     }
                     .background(Color.init(hex: "#80000000"))
                     .cornerRadius(4)
@@ -75,16 +76,16 @@ extension ShopItemView {
                             Text(item.paint.localized)
                                 .font(.footnote)
                                 .foregroundColor(item.isPaintLight ? .black : .white)
-                                .padding([.vertical], 3.0)
-                                .padding([.horizontal], 6.0)
+                                .padding([.vertical], 2.0)
+                                .padding([.horizontal], 4.0)
                         }
                         .background(Color(item.paintUiColor))
                         .cornerRadius(4)
                     }
                 }
-                .padding([.top], 4.0)
+                .padding([.top], 2.0)
                 
-                HStack(spacing: 5.0) {
+                HStack(spacing: 4.0) {
                     Spacer()
                     
                     if !item.isTradable {
@@ -93,9 +94,9 @@ extension ShopItemView {
                     
                     ItemPriceView(price: item.price)
                 }
-                .padding([.top], 24.0)
+                .padding([.top], 8.0)
             }
-            .padding([.all], 10.0)
+            .padding([.all], 6.0)
         }
         
         struct ItemShopExclusiveView: View {
@@ -111,7 +112,7 @@ extension ShopItemView {
                     }
                     .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
                     .padding([.vertical], 2.0)
-                    .padding([.horizontal], 6.0)
+                    .padding([.horizontal], 4.0)
                 }
                 .background(Color.init(hex: "#B82100"))
                 .cornerRadius(4)
@@ -133,7 +134,7 @@ extension ShopItemView {
                     }
                     .frame(height: UIFont.preferredFont(forTextStyle: .footnote).pointSize + 4.0)
                     .padding([.vertical], 2.0)
-                    .padding([.horizontal], 6.0)
+                    .padding([.horizontal], 4.0)
                 }
                 .background(Color.init(hex: "#111111"))
                 .cornerRadius(4)
@@ -146,7 +147,7 @@ extension ShopItemView {
         let contentHeight: CGFloat
         
         var body: some View {
-            let iconPadding: CGFloat = 10.0
+            let iconPadding: CGFloat = 4
             HStack(spacing: .zero) {
                 let iconSize = max(contentHeight - iconPadding * 2, .zero)
                 if let imageData = viewModel.imageData {
@@ -156,17 +157,7 @@ extension ShopItemView {
                         .frame(width: iconSize, height: iconSize)
                         .padding([.all], iconPadding)
                 }
-                
-                if viewModel.isFeatured {
-                    Image(viewModel.categoryImageFileName)
-                        .resizable()
-                        .frame(maxWidth: .infinity)
-                        .padding([.trailing], 10.0)
-                        .aspectRatio(contentMode: .fill)
-                        .opacity(0.05)
-                } else {
-                    Spacer()
-                }
+                Spacer()
             }
             .frame(height: contentHeight)
         }

@@ -1,8 +1,8 @@
 //
 //  ShopItemDetailsView.swift
-//  Item Shop Demo
+//  Watch Item Shop Demo WatchKit Extension
 //
-//  Created by Michael Hinton on 2/13/22.
+//  Created by Michael Hinton on 2/15/22.
 //  Copyright © 2022 HinTech, LLC. All rights reserved.
 //
 
@@ -22,13 +22,6 @@ struct ShopItemDetailsView: View {
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding([.top], 12.0)
-                
-                GeometryReader { metrics in
-                    LoopingPlayerView(url: viewModel.item.previewUrl!)
-                        .cornerRadius(10)
-                        .frame(height: metrics.size.width * 9.0 / 16.0)
-                        .padding([.top], 8.0)
-                }
             }
             .padding([.horizontal], 12.0)
         }
