@@ -15,7 +15,7 @@ struct ShopView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVStack(spacing: .zero, pinnedViews: [.sectionHeaders]) {
+                LazyVStack(spacing: .zero) {
                     if let itemShop = viewModel.itemShop {
                         ShopContentView(itemShop: itemShop)
                         CreatorCodeView()
@@ -50,7 +50,7 @@ private extension ShopView {
             }
             .background(Color(hex: "#1DABEB"))
             .cornerRadius(10)
-            .padding([.top, .horizontal], 8.0)
+            .padding([.top], 8.0)
         }
     }
     
@@ -64,7 +64,7 @@ private extension ShopView {
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding([.all], 8.0)
+                    .padding([.vertical], 8.0)
             }
             
             Section(
@@ -116,7 +116,7 @@ private extension ShopView {
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding([.all], 8.0)
+                .padding([.vertical], 8.0)
         }
     }
 }

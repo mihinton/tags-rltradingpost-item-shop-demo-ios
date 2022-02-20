@@ -37,7 +37,6 @@ struct ShopSectionHeaderView: View {
                 }
             }
             .padding([.vertical], 4.0)
-            .padding([.horizontal], 8.0)
         }
         .background(Color("PrimaryBackgroundColor"))
     }

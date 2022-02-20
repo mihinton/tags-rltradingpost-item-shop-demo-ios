@@ -30,7 +30,6 @@ struct ShopItemView: View {
         .background(ItemCardBackgroundView(item: viewModel.item))
         .cornerRadius(10)
         .padding([.vertical], 4.0)
-        .padding([.horizontal], 8.0)
     }
     
     private func setupContentHeight(geometry: GeometryProxy) -> some View {
@@ -138,7 +137,7 @@ extension ShopItemView {
         var body: some View {
             LinearGradient(
                 gradient: Gradient(stops: [
-                    .init(color: .black, location: -0.1),
+                    .init(color: Color(hex: "#040404"), location: -0.1),
                     .init(color: Color(item.rarityUiColor), location: 1.0)
                 ]),
                 startPoint: .top,
